@@ -517,12 +517,14 @@ def lang_switch(page_id, lang):
     items = []
     for code in LANGS:
         cur = ' aria-current="true"' if code == lang else ""
-        items.append(f'<a class="langdd__item" href="{url(page_id, code)}" hreflang="{code}" lang="{code}"{cur}>'
-                     f'{flag_img(code)} {esc(T[code]["label"])}</a>')
+        # short code on screen (HR, EN, DE); full name for screen readers and on hover
+        items.append(f'<a class="langdd__item" href="{url(page_id, code)}" hreflang="{code}" lang="{code}"'
+                     f' title="{esc(T[code]["label"])}" aria-label="{esc(T[code]["label"])}"{cur}>'
+                     f'{flag_img(code)} {code.upper()}</a>')
     label = esc(T[lang]["ui"]["lang_label"])
     return (f'<div class="langdd">'
             f'<button class="langdd__toggle" type="button" aria-expanded="false" aria-haspopup="true" '
-            f'aria-label="{label}: {esc(T[lang]["label"])}">{flag_img(lang)} <span>{esc(T[lang]["label"])}</span>'
+            f'aria-label="{label}: {esc(T[lang]["label"])}">{flag_img(lang)} <span>{lang.upper()}</span>'
             f'<span class="caret" aria-hidden="true"></span></button>'
             f'<div class="langdd__menu">{"".join(items)}</div></div>')
 

@@ -46,8 +46,9 @@ phone = "+385 00 000 0000"
 address_lines = ["Piramatovci, Skradin", "Croatia"]   # OPEN: full postal address
 
 [languages]
-# First entry is the default language, served at the site root.
-order = ["en", "de", "hr"]
+# First entry is the default language, served at the site root (Croatian).
+# The others live under /en/, /de/ with hreflang alternates.
+order = ["hr", "en", "de"]
 
 [seo]
 # Product structured data (schema.org Product). Keep false until claims are final.

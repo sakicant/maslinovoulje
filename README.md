@@ -27,6 +27,8 @@ Never edit files in `dist/`; they are overwritten.
 | CSS, JS, images, fonts | `static/` (served as `/assets/`) |
 | Order API, admin, mail, database | `php/` |
 
+Croatian is served at the site root; English and German under `/en/` and `/de/`.
+
 To add a language: copy `lang/en.toml` to `lang/xx.toml`, translate, add `"xx"` to `languages.order` in `config/site.toml`, add country names in `data/countries.json`.
 
 ## How an order works

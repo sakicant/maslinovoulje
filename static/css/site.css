@@ -91,7 +91,7 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
   .menubtn { display: none; }
   .nav { display: flex; align-items: center; gap: 24px; order: 0; }
   .langdd { padding-right: 20px; border-right: 1px solid var(--line); }
-  .langdd__menu { position: absolute; top: 100%; left: -12px; margin-top: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 6px; min-width: 170px; box-shadow: 0 12px 28px rgba(20,20,20,.12); z-index: 30; }
+  .langdd__menu { position: absolute; top: 100%; left: -12px; margin-top: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 6px; min-width: 104px; box-shadow: 0 12px 28px rgba(20,20,20,.12); z-index: 30; }
   .langdd__menu::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
   @media (hover: hover) {
     .langdd:hover .langdd__menu, .langdd:focus-within .langdd__menu { display: flex; }
