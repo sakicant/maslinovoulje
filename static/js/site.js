@@ -81,6 +81,13 @@
     });
   }
 
+  var topbar = document.querySelector('.top');
+  if (topbar) {
+    var onScroll = function () { topbar.classList.toggle('is-scrolled', window.scrollY > 4); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   var toastTimer;
   function toast(text, link) {
     var t = document.querySelector('.toast');

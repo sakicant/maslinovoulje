@@ -644,8 +644,8 @@ def build_page(page_id, tpl_name, lang, ver):
         },
     }
     body = render(template(f"pages/{tpl_name}.html"), ctx, lang)
-    staging_banner = (f'<div class="staging">{esc(T[lang]["ui"]["staging_banner"])}</div>'
-                      if SITE["staging"] else "")
+    # owner: no visible "preview only" bar; staging still means noindex + robots Disallow
+    staging_banner = ""
     base_ctx = dict(ctx)
     base_ctx["page"] = {
         "id": page_id, "lang": lang, "title": fill(pg["title"], lang),
