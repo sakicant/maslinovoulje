@@ -268,8 +268,13 @@ def photo(key, lang, cls=""):
     alt = esc(ph["alt"][lang])
     ratio = ph.get("ratio", "4/3")
     if ph.get("src"):
+        src = ph["src"]
+        small = re.sub(r"\.jpg$", "-800.jpg", src)
+        has_small = os.path.isfile(os.path.join(ROOT, "static", small.replace("/assets/", "", 1)))
+        srcset = f' srcset="{esc(small)} 800w, {esc(src)} 1600w" sizes="(min-width: 800px) 50vw, 100vw"' if has_small else ""
+        load = 'fetchpriority="high"' if key == "hero" else 'loading="lazy"'
         return (f'<figure class="photo {cls}" style="aspect-ratio:{ratio}">'
-                f'<img src="{esc(ph["src"])}" alt="{alt}" loading="lazy" decoding="async"></figure>')
+                f'<img src="{esc(src)}"{srcset} alt="{alt}" {load} decoding="async"></figure>')
     return (f'<figure class="photo photo--todo {cls}" style="aspect-ratio:{ratio}" role="img" aria-label="{alt}">'
             f'<figcaption><span>{esc(T[lang]["ui"]["photo_todo"])}</span>{esc(ph["todo"])}</figcaption></figure>')
 

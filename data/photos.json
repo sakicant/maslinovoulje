@@ -1,45 +1,109 @@
 {
-  "_readme": "Photo slots. Put the owner's own photo in static/img/ and set src (e.g. \"/assets/img/grove.jpg\"). While src is empty, a grey placeholder shows the caption below. Never use stock photos.",
+  "_readme": "Photo slots. src = web file in static/img/photos (1600 px + a -800 version, made without GPS/camera data). status: 'trajno' = keep, 'privremeno' = placeholder until a 2026 photo of the same thing exists. source = original file on the owner's desktop. Empty src shows a grey placeholder with the todo text. Never use stock photos.",
   "hero": {
-    "src": "",
+    "src": "/assets/img/photos/hero.jpg",
     "ratio": "4/3",
     "todo": "Old olive trees on the family land in Piramatovci, wide shot",
-    "alt": {"en": "Old olive trees in Piramatovci", "de": "Alte Olivenbäume in Piramatovci", "hr": "Stare masline u Piramatovcima"}
+    "alt": {
+      "en": "Old olive trees in Piramatovci",
+      "de": "Alte Olivenbäume in Piramatovci",
+      "hr": "Stare masline u Piramatovcima"
+    },
+    "status": "privremeno",
+    "source": "kopirano/PXL_20221113_105437190.MP.jpg"
   },
   "branch": {
-    "src": "",
+    "src": "/assets/img/photos/branch.jpg",
     "ratio": "4/5",
     "todo": "A branch full of olives, green turning purple",
-    "alt": {"en": "A branch full of olives, green and turning purple", "de": "Ein Zweig voller Oliven, grün und schon violett", "hr": "Grana puna maslina, zelenih i ljubičastih"}
+    "alt": {
+      "en": "A branch full of olives, green and turning purple",
+      "de": "Ein Zweig voller Oliven, grün und schon violett",
+      "hr": "Grana puna maslina, zelenih i ljubičastih"
+    },
+    "status": "trajno",
+    "source": "20261118_124756.jpg"
   },
   "harvest_nets": {
-    "src": "",
+    "src": "/assets/img/photos/harvest_nets.jpg",
     "ratio": "4/3",
     "todo": "Family picking with hand-held shakers, nets under the tree",
-    "alt": {"en": "Picking olives with nets under the tree", "de": "Olivenernte mit Netzen unter dem Baum", "hr": "Berba maslina s mrežama ispod stabla"}
+    "alt": {
+      "en": "Picking olives with nets under the tree",
+      "de": "Olivenernte mit Netzen unter dem Baum",
+      "hr": "Berba maslina s mrežama ispod stabla"
+    },
+    "status": "privremeno",
+    "source": "kopirano/PXL_20221117_092426805.MP.jpg"
   },
   "fruit": {
-    "src": "",
-    "ratio": "1/1",
+    "src": "/assets/img/photos/fruit.jpg",
+    "ratio": "4/3",
     "todo": "Harvested olives, mostly green with some turning purple",
-    "alt": {"en": "Freshly picked olives, mostly green", "de": "Frisch geerntete Oliven, überwiegend grün", "hr": "Tek ubrane masline, uglavnom zelene"}
+    "alt": {
+      "en": "Olives on the branch in November, green and turning purple",
+      "de": "Oliven am Zweig im November, grün und schon violett",
+      "hr": "Masline na grani u studenom, zelene i ljubičaste"
+    },
+    "status": "trajno",
+    "source": "20261106_163042.jpg"
   },
   "mill": {
-    "src": "",
-    "ratio": "4/3",
-    "todo": "The local mill at night, fresh cloudy oil running",
-    "alt": {"en": "Fresh oil at the local mill at night", "de": "Frisches Öl nachts in der Ölmühle", "hr": "Svježe ulje noću u lokalnoj uljari"}
+    "src": "/assets/img/photos/mill.jpg",
+    "ratio": "3/4",
+    "todo": "Fresh oil running at the local mill",
+    "alt": {
+      "en": "Fresh olive oil running at the local mill",
+      "de": "Frisches Olivenöl läuft in der Ölmühle",
+      "hr": "Svježe maslinovo ulje teče u lokalnoj uljari"
+    },
+    "status": "trajno",
+    "source": "20261119_235521.jpg"
   },
   "bottles": {
     "src": "",
     "ratio": "3/2",
     "todo": "The three bottles (0.25 L, 0.5 L, 1 L) with labels, on a plain background",
-    "alt": {"en": "Three bottles of olive oil", "de": "Drei Flaschen Olivenöl", "hr": "Tri boce maslinovog ulja"}
+    "alt": {
+      "en": "Three bottles of olive oil",
+      "de": "Drei Flaschen Olivenöl",
+      "hr": "Tri boce maslinovog ulja"
+    }
   },
   "place": {
-    "src": "",
-    "ratio": "16/9",
+    "src": "/assets/img/photos/place.jpg",
+    "ratio": "4/3",
     "todo": "View over Piramatovci and the hills towards Skradin",
-    "alt": {"en": "The hills of Piramatovci near Skradin", "de": "Die Hügel von Piramatovci bei Skradin", "hr": "Brda Piramatovaca kod Skradina"}
+    "alt": {
+      "en": "The hills of Piramatovci near Skradin",
+      "de": "Die Hügel von Piramatovci bei Skradin",
+      "hr": "Brda Piramatovaca kod Skradina"
+    },
+    "status": "privremeno",
+    "source": "kopirano/PXL_20221207_132727460.MP.jpg"
+  },
+  "shakers": {
+    "src": "/assets/img/photos/shakers.jpg",
+    "ratio": "4/3",
+    "status": "privremeno",
+    "source": "kopirano/PXL_20221115_103020948.MP.jpg",
+    "todo": "Hand-held olive shaker on the harvest net",
+    "alt": {
+      "en": "A hand-held olive shaker lying on the harvest net",
+      "de": "Ein Handschüttler für Oliven auf dem Erntenetz",
+      "hr": "Ručna tresačica za masline na mreži za berbu"
+    }
+  },
+  "canisters": {
+    "src": "/assets/img/photos/canisters.jpg",
+    "ratio": "5/2",
+    "status": "trajno",
+    "source": "20261120_000657~2.jpg",
+    "todo": "Canisters of fresh, cloudy oil",
+    "alt": {
+      "en": "Canisters of fresh, still cloudy olive oil",
+      "de": "Kanister mit frischem, noch trübem Olivenöl",
+      "hr": "Kanisteri svježeg, još mutnog maslinovog ulja"
+    }
   }
 }
