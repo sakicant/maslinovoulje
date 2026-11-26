@@ -110,16 +110,16 @@ title = "{brand} {category} from Piramatovci, Croatia"
 description = "Family olive oil from old trees in Piramatovci, near Skradin. A few hundred bottles per harvest, shipped within the EU."
 kicker = "Harvest {year} · Piramatovci, Croatia"
 h1 = "Olive oil from our family's trees"
-lead = "A few hundred bottles a year. Picked by our family near Skradin and Krka National Park, and pressed the same night at the local mill."
+lead = "A few hundred bottles a year. Picked by our family near Skradin and Krka National Park, and pressed at the local mill."
 cta_shop = "Order bottles"
 cta_story = "Our story"
 intro_title = "What it is"
 intro = """
-Olive oil from the trees on our family land in Piramatovci, a village above Skradin. Some of the trees are so old that their trunks have gone hollow.
+Olive oil from the trees on our family land in Piramatovci, a village above Skradin.
 
-We pick in November, two or three of us, with hand-held shakers and nets. The olives go to the local mill and are pressed the same night.
+We pick in November, two or three of us, with hand-held shakers and nets. The olives go to the local mill to be pressed.
 
-For two years we sold this oil only to neighbours and friends, in litre bottles. Now you can order it home.
+Until now we have shared this oil only within the family, with neighbours and friends. Now you can order it home.
 """
 bottles_title = "Three bottles"
 bottles_more = "See all bottles and sets"
@@ -142,7 +142,7 @@ lead = "Shipping is calculated in the cart before you send anything. [[VAT note 
 [pages.story]
 slug = "our-story"
 title = "Our story | {brand} {category}"
-description = "A family, old olive trees in Piramatovci near Skradin, and a harvest pressed the same night."
+description = "A family, old olive trees in Piramatovci near Skradin, and a harvest pressed at the local mill."
 h1 = "Our story"
 lead = "A small family harvest from old trees near Skradin."
 family_title = "The family"
@@ -151,7 +151,7 @@ We are the {brand} family from Piramatovci. The olive trees stand on our family 
 """
 grove_title = "The trees"
 grove = """
-Many of our trees are old. Some have trunks hollowed out by age, and still carry fruit every year.
+Many of our trees are old, and still carry fruit every year.
 """
 harvest_title = "The harvest"
 harvest = """
@@ -159,9 +159,9 @@ We pick in November. Two or three of us work the trees with hand-held olive shak
 
 In {year} the fruit was mostly green, with some olives turning purple. After two weeks of rain it was a heavy crop.
 """
-mill_title = "Pressed the same night"
+mill_title = "Pressed at the local mill"
 mill = """
-We take the olives to the local mill on the day we pick them, and they are pressed the same night.
+We take the picked olives to the local mill, where they are pressed.
 
 Fresh oil is cloudy. Over the following months it settles, and we rack it off its sediment.
 """

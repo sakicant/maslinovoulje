@@ -51,6 +51,7 @@ BANNED = [
     r"extra[\s-]*virgin", r"extra\s+vergine", r"nativ(es)?\s+oliven", r"djevičansk",
     r"cold[\s-]*press", r"cold\s+extract", r"kaltgepresst", r"kalt\s+extrahiert", r"hladno\s+prešan",
     r"\borganic\b", r"\bbio-", r"netretiran", r"\bbiologisch", r"\bekološk", r"untreated", r"unbehandelt",
+    r"hollow", r"šuplj", r"hohl",  # owner: no hollow trunks on the website (26 Nov 2026)
     r"oblica", r"skradin(er|sko|ian)?\s+(olive|oliven|maslinov)", "—",  # em dash
 ]
 

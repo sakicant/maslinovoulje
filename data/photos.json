@@ -6,11 +6,11 @@
     "todo": "Old olive trees on the family land in Piramatovci, wide shot",
     "alt": {"en": "Old olive trees in Piramatovci", "de": "Alte Olivenbäume in Piramatovci", "hr": "Stare masline u Piramatovcima"}
   },
-  "hollow_trunk": {
+  "branch": {
     "src": "",
     "ratio": "4/5",
-    "todo": "Close-up of an old tree with a hollow trunk",
-    "alt": {"en": "An old olive tree with a hollow trunk", "de": "Ein alter Olivenbaum mit hohlem Stamm", "hr": "Staro stablo masline sa šupljim deblom"}
+    "todo": "A branch full of olives, green turning purple",
+    "alt": {"en": "A branch full of olives, green and turning purple", "de": "Ein Zweig voller Oliven, grün und schon violett", "hr": "Grana puna maslina, zelenih i ljubičastih"}
   },
   "harvest_nets": {
     "src": "",

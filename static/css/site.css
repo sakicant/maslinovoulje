@@ -53,9 +53,13 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 .logo { text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: .45em; margin-right: auto; }
 .logo__mark { width: 40px; height: 40px; flex: none; }
 .logo--foot .logo__mark { width: 48px; height: 48px; }
-@media (max-width: 380px) { .logo__mark { width: 34px; height: 34px; } .logo__cat { display: none; } }
-.logo__brand { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 1.45rem; }
-.logo__cat { font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; color: var(--olive); }
+@media (max-width: 380px) { .logo__mark { width: 36px; height: 36px; } }
+/* name large on top, descriptor centred underneath in regular weight */
+.logo__text { display: flex; flex-direction: column; align-items: center; line-height: 1; }
+.logo__brand { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 1.6rem; line-height: 1.05; }
+.logo__cat { font-family: var(--sans); font-weight: 400; font-size: .62rem; text-transform: uppercase; letter-spacing: .16em; color: var(--olive); margin-top: 3px; white-space: nowrap; }
+.logo--foot .logo__brand { font-size: 1.8rem; }
+.logo--foot .logo__cat { font-size: .68rem; }
 .nav { display: none; }
 .nav ul { list-style: none; margin: 0; padding: 0; }
 .nav a { text-decoration: none; color: var(--black); }

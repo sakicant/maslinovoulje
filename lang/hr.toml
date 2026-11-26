@@ -99,16 +99,16 @@ title = "{brand} {category} iz Piramatovaca"
 description = "Obiteljsko maslinovo ulje sa starih stabala u Piramatovcima kod Skradina. Nekoliko stotina boca po berbi, dostava unutar EU."
 kicker = "Berba {year} · Piramatovci, Hrvatska"
 h1 = "Maslinovo ulje s naših stabala"
-lead = "Nekoliko stotina boca godišnje. Obitelj ih bere kod Skradina i Nacionalnog parka Krka, a ulje se preša iste noći u lokalnoj uljari."
+lead = "Nekoliko stotina boca godišnje. Obitelj ih bere kod Skradina i Nacionalnog parka Krka, a ulje se preša u lokalnoj uljari."
 cta_shop = "Naručite boce"
 cta_story = "Naša priča"
 intro_title = "Što je to"
 intro = """
-Maslinovo ulje sa stabala na našoj obiteljskoj zemlji u Piramatovcima, selu iznad Skradina. Neka su stabla toliko stara da su im debla šuplja.
+Maslinovo ulje sa stabala na našoj obiteljskoj zemlji u Piramatovcima, selu iznad Skradina.
 
-Beremo u studenom, dvoje ili troje nas, ručnim tresačicama i mrežama. Masline vozimo u lokalnu uljaru i prešaju se iste noći.
+Beremo u studenom, dvoje ili troje nas, ručnim tresačicama i mrežama. Masline vozimo na prešanje u lokalnu uljaru.
 
-Dvije godine prodavali smo ovo ulje samo susjedima i prijateljima, u bocama od litre. Sada ga možete naručiti kući.
+Do sada smo ovo ulje dijelili samo unutar obitelji, sa susjedima i prijateljima. Sada ga možete naručiti kući.
 """
 bottles_title = "Tri boce"
 bottles_more = "Sve boce i paketi"
@@ -131,7 +131,7 @@ lead = "Cijenu dostave vidite u košarici prije nego što išta pošaljete. [[Na
 [pages.story]
 slug = "nasa-prica"
 title = "Naša priča | {brand} {category}"
-description = "Obitelj, stare masline u Piramatovcima kod Skradina i berba prešana iste noći."
+description = "Obitelj, stare masline u Piramatovcima kod Skradina i berba prešana u lokalnoj uljari."
 h1 = "Naša priča"
 lead = "Mala obiteljska berba sa starih stabala kod Skradina."
 family_title = "Obitelj"
@@ -140,7 +140,7 @@ Mi smo obitelj {brand} iz Piramatovaca. Masline rastu na našoj obiteljskoj zeml
 """
 grove_title = "Stabla"
 grove = """
-Mnoga naša stabla su stara. Neka imaju debla šuplja od starosti, a i dalje svake godine rađaju.
+Mnoga naša stabla su stara, a i dalje svake godine rađaju.
 """
 harvest_title = "Berba"
 harvest = """
@@ -148,9 +148,9 @@ Beremo u studenom. Dvoje ili troje nas radi ručnim tresačicama, a ispod stabal
 
 {year}. plodovi su bili uglavnom zeleni, a neki su počeli ljubičastiti. Nakon dva tjedna kiše rod je bio obilan.
 """
-mill_title = "Prešano iste noći"
+mill_title = "Prešano u lokalnoj uljari"
 mill = """
-Masline vozimo u lokalnu uljaru isti dan kad ih uberemo i prešaju se iste noći.
+Ubrane masline vozimo u lokalnu uljaru, gdje se prešaju.
 
 Svježe ulje je mutno. Tijekom sljedećih mjeseci se taloži, a mi ga pretačemo s taloga.
 """

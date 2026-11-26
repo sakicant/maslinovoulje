@@ -72,18 +72,18 @@ def build():
     files["mark-black.svg"] = doc(400, 400, mark(colour="#141414"))
     stacked = (f'<g transform="translate(40,0)">{mark()}</g>'
                + text(240, 462, 46, BRAND, 12, INK, SERIF, 700)
-               + text(240, 500, 16, DESCRIPTOR, 6, OLIVE, SANS, 500))
+               + text(240, 500, 16, DESCRIPTOR, 6, OLIVE, SANS, 400))
     files["logo-stacked.svg"] = doc(480, 530, stacked)
     files["logo-stacked-white.svg"] = doc(480, 530, stacked.replace(mark(), mark(colour="#ffffff", bg=GREEN, cid="w"))
                                           .replace(f"fill:{INK}", "fill:#ffffff").replace(f"fill:{OLIVE}", f"fill:{SAGE}"), bg=GREEN)
     horiz = (f'<g transform="translate(0,0) scale(0.5)">{mark()}</g>'
-             + text(224, 104, 50, BRAND, 10, INK, SERIF, 700, "start")
-             + text(228, 140, 15, DESCRIPTOR, 5.5, OLIVE, SANS, 500, "start"))
+             + text(384, 104, 50, BRAND, 10, INK, SERIF, 700)
+             + text(384, 140, 15, DESCRIPTOR, 5.5, OLIVE, SANS, 400))
     files["logo-horizontal.svg"] = doc(560, 200, horiz)
     files["og-image.svg"] = doc(1200, 630,
                                 f'<g transform="translate(165,115) scale(1)">{mark()}</g>'
-                                + text(640, 300, 96, BRAND, 22, INK, SERIF, 700, "start")
-                                + text(646, 360, 26, DESCRIPTOR, 9, OLIVE, SANS, 500, "start"), bg=SAGE)
+                                + text(836, 300, 96, BRAND, 22, INK, SERIF, 700)
+                                + text(836, 360, 26, DESCRIPTOR, 9, OLIVE, SANS, 400), bg=SAGE)
     os.makedirs(OUT, exist_ok=True)
     for name, s in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8", newline="\n") as fh:

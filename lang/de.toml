@@ -100,16 +100,16 @@ title = "{brand} {category} aus Piramatovci, Kroatien"
 description = "Familien-Olivenöl von alten Bäumen in Piramatovci bei Skradin. Einige hundert Flaschen pro Ernte, Versand innerhalb der EU."
 kicker = "Ernte {year} · Piramatovci, Kroatien"
 h1 = "Olivenöl von den Bäumen unserer Familie"
-lead = "Einige hundert Flaschen im Jahr. Von unserer Familie bei Skradin und dem Nationalpark Krka geerntet und noch in derselben Nacht in der Ölmühle im Ort gepresst."
+lead = "Einige hundert Flaschen im Jahr. Von unserer Familie bei Skradin und dem Nationalpark Krka geerntet und in der Ölmühle im Ort gepresst."
 cta_shop = "Flaschen bestellen"
 cta_story = "Unsere Geschichte"
 intro_title = "Was es ist"
 intro = """
-Olivenöl von den Bäumen auf dem Land unserer Familie in Piramatovci, einem Dorf oberhalb von Skradin. Manche Bäume sind so alt, dass ihre Stämme hohl geworden sind.
+Olivenöl von den Bäumen auf dem Land unserer Familie in Piramatovci, einem Dorf oberhalb von Skradin.
 
-Wir ernten im November, zu zweit oder zu dritt, mit Handschüttlern und Netzen. Die Oliven kommen in die Ölmühle im Ort und werden noch in derselben Nacht gepresst.
+Wir ernten im November, zu zweit oder zu dritt, mit Handschüttlern und Netzen. Die Oliven kommen zum Pressen in die Ölmühle im Ort.
 
-Zwei Jahre lang haben wir dieses Öl nur an Nachbarn und Freunde verkauft, in Literflaschen. Jetzt können Sie es nach Hause bestellen.
+Bisher haben wir dieses Öl nur in der Familie, mit Nachbarn und Freunden geteilt. Jetzt können Sie es nach Hause bestellen.
 """
 bottles_title = "Drei Flaschen"
 bottles_more = "Alle Flaschen und Sets"
@@ -132,7 +132,7 @@ lead = "Die Versandkosten sehen Sie im Warenkorb, bevor Sie etwas absenden. [[Hi
 [pages.story]
 slug = "unsere-geschichte"
 title = "Unsere Geschichte | {brand} {category}"
-description = "Eine Familie, alte Olivenbäume in Piramatovci bei Skradin und eine Ernte, die noch in derselben Nacht gepresst wird."
+description = "Eine Familie, alte Olivenbäume in Piramatovci bei Skradin und eine Ernte, gepresst in der Ölmühle im Ort."
 h1 = "Unsere Geschichte"
 lead = "Eine kleine Familienernte von alten Bäumen bei Skradin."
 family_title = "Die Familie"
@@ -141,7 +141,7 @@ Wir sind die Familie {brand} aus Piramatovci. Die Olivenbäume stehen auf dem La
 """
 grove_title = "Die Bäume"
 grove = """
-Viele unserer Bäume sind alt. Manche haben vom Alter hohle Stämme und tragen trotzdem jedes Jahr Früchte.
+Viele unserer Bäume sind alt und tragen trotzdem jedes Jahr Früchte.
 """
 harvest_title = "Die Ernte"
 harvest = """
@@ -149,9 +149,9 @@ Wir ernten im November. Zu zweit oder zu dritt arbeiten wir mit Handschüttlern 
 
 {year} waren die Früchte überwiegend grün, einige färbten sich schon violett. Nach zwei Wochen Regen war es eine reiche Ernte.
 """
-mill_title = "In derselben Nacht gepresst"
+mill_title = "Gepresst in der Ölmühle im Ort"
 mill = """
-Wir bringen die Oliven noch am Erntetag in die Ölmühle im Ort, und sie werden in derselben Nacht gepresst.
+Wir bringen die geernteten Oliven in die Ölmühle im Ort, wo sie gepresst werden.
 
 Frisches Öl ist trüb. In den folgenden Monaten setzt es sich, und wir ziehen es vom Bodensatz ab.
 """
