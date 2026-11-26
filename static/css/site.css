@@ -50,7 +50,10 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 /* header */
 .top { border-bottom: 1px solid var(--line); background: var(--paper); position: sticky; top: 0; z-index: 20; }
 .top__in { display: flex; align-items: center; gap: 12px; min-height: 60px; }
-.logo { text-decoration: none; color: var(--ink); display: flex; align-items: baseline; gap: .4em; margin-right: auto; }
+.logo { text-decoration: none; color: var(--ink); display: flex; align-items: center; gap: .45em; margin-right: auto; }
+.logo__mark { width: 40px; height: 40px; flex: none; }
+.logo--foot .logo__mark { width: 48px; height: 48px; }
+@media (max-width: 380px) { .logo__mark { width: 34px; height: 34px; } .logo__cat { display: none; } }
 .logo__brand { font-family: var(--serif); font-style: italic; font-weight: 700; font-size: 1.45rem; }
 .logo__cat { font-size: .78rem; text-transform: uppercase; letter-spacing: .14em; color: var(--olive); }
 .nav { display: none; }

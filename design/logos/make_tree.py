@@ -29,7 +29,7 @@ def f(v):
 class Tree:
     def __init__(self, seed, cx=200, ground=330, crown=(200, 158, 172, 122), depth=6,
                  trunk_len=62, trunk_w=44, limbs=4, spread=38, droop=0.0, hollow=False,
-                 leaf_len=12.5, leaf_w=3.3, leaf_gap=10.5, roots=7, olives=0.0):
+                 leaf_len=12.5, leaf_w=3.3, leaf_gap=10.5, roots=7, olives=0.0, root_len=(18, 58)):
         self.r = random.Random(seed)
         self.cx, self.ground = cx, ground
         self.ccx, self.ccy, self.crx, self.cry = crown
@@ -39,6 +39,7 @@ class Tree:
         self.hollow = hollow
         self.leaf_len, self.leaf_w, self.leaf_gap = leaf_len, leaf_w, leaf_gap
         self.n_roots = roots
+        self.root_len = root_len
         self.olive_rate = olives
         self.phase = self.r.uniform(0, 6.28)
         self.wood = []      # polygons
@@ -198,7 +199,7 @@ class Tree:
             side = -1 if i % 2 == 0 else 1
             x0 = self.cx + side * r.uniform(2, self.trunk_w * 0.55)
             a = side * math.radians(r.uniform(68, 104))
-            L = r.uniform(18, 58)
+            L = r.uniform(*self.root_len)
             dx, dy = self.dirv(a)
             p1 = (x0 + dx * L, self.ground + dy * L + r.uniform(2, 9))
             c = (x0 + dx * L * 0.4, self.ground + r.uniform(-1, 4))

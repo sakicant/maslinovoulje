@@ -52,7 +52,7 @@ order = ["en", "de", "hr"]
 [seo]
 # Product structured data (schema.org Product). Keep false until claims are final.
 product_schema = false
-og_image = "/assets/img/og-placeholder.png"
+og_image = "/assets/img/og-image.png"
 
 [pricing]
 # Croatian "bazna cijena" rule (in force 17 Nov 2026). Applies once the business is

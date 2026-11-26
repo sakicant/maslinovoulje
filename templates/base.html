@@ -8,6 +8,8 @@
   <meta name="theme-color" content="#2E4A2B">
   {{ page.head|raw }}
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/site.css?v={{ page.ver }}">
   <script src="/assets/js/site.js?v={{ page.ver }}" defer></script>
 </head>
@@ -17,6 +19,7 @@
   <header class="top">
     <div class="wrap top__in">
       <a class="logo" href="{{ page.home }}">
+        <img class="logo__mark" src="/assets/img/logo-mark.svg" width="40" height="40" alt="">
         <span class="logo__brand">{{ site.brand }}</span>
         <span class="logo__cat">{{ site.category }}</span>
       </a>
@@ -41,7 +44,7 @@
   <footer class="foot">
     <div class="wrap foot__in">
       <div>
-        <p class="logo logo--foot"><span class="logo__brand">{{ site.brand }}</span> <span class="logo__cat">{{ site.category }}</span></p>
+        <p class="logo logo--foot"><img class="logo__mark" src="/assets/img/logo-mark-white.svg" width="48" height="48" alt=""> <span class="logo__brand">{{ site.brand }}</span> <span class="logo__cat">{{ site.category }}</span></p>
         <p>{{ ui.footer_made }}</p>
         <p>{{ ui.eu_only }}</p>
       </div>
