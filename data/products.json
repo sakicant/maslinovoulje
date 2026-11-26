@@ -4,7 +4,7 @@
     "Prices are in EUR with 2 decimals. Stock is a bottle count, edited by hand, then run build.",
     "STOCK NUMBERS BELOW ARE PLACEHOLDERS until the final 2026 bottle count is known.",
     "online=false means the product is shown but only for local pickup (OPEN: 1 L online or pickup only).",
-    "base_price / base_price_date: Croatian base price rule. Only shown when site.toml pricing.show_base_price = true.",
+    "base_price: Croatian base price rule (shown next to every price). base_price_date empty = the date in config/site.toml pricing.base_price_date. Bundles: base = sum of their bottles unless they set base_price.",
     "Bundles: price null = sum of the bottles (no discount). Contents and prices are OPEN."
   ],
   "currency": "EUR",

@@ -317,11 +317,41 @@ def stock_badge(lang, big=False):
             f'<span aria-hidden="true" class="stamp__inner">{inner}</span></div>')
 
 
-def price_block(price_c, lang, base=None, base_date=""):
+MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August",
+             "September", "October", "November", "December"]
+
+
+def fmt_date(iso, lang):
+    """2026-11-26 -> 26. 11. 2026. (hr), 26.11.2026 (de), 26 November 2026 (en)."""
+    y, m, d = (int(x) for x in iso.split("-"))
+    if lang == "hr":
+        return f"{d}. {m}. {y}."
+    if lang == "de":
+        return f"{d:02d}.{m:02d}.{y}"
+    return f"{d} {MONTHS_EN[m - 1]} {y}"
+
+
+def base_date(item=None):
+    """Base price date: the item's own date, else the site-wide one in config/site.toml."""
+    d = (item or {}).get("base_price_date") or SITE["pricing"].get("base_price_date", "")
+    if not d:
+        die("base price shown but no base_price_date (set pricing.base_price_date in config/site.toml)")
+    return d
+
+
+def base_text(base_c, date_iso, lang):
+    """Croatian base price rule (17 Nov 2026): label translated, amount always in Croatian format."""
+    if not SITE["pricing"]["show_base_price"]:
+        return ""
+    if base_c is None or base_c <= 0:
+        die("a shown price has no base price")
+    return fill(T[lang]["ui"]["base_price"], lang, {"date": fmt_date(date_iso, lang), "price": money(base_c)})
+
+
+def price_block(price_c, lang, base_c=None, date_iso=""):
     out = f'<span class="price">{money(price_c)}</span>'
-    if SITE["pricing"]["show_base_price"] and base is not None:
-        line = fill(T[lang]["ui"]["base_price"], lang, {"date": base_date or "[date]", "price": money(base)})
-        out += f'<span class="base-price">{esc(line)}</span>'
+    if SITE["pricing"]["show_base_price"]:
+        out += f'<span class="base-price">{esc(base_text(base_c, date_iso, lang))}</span>'
     return out
 
 
@@ -338,6 +368,19 @@ def bundle_price_c(b):
         return cents(b["price"])
     by_id = {p["id"]: p for p in PRODUCTS["products"]}
     return sum(cents(by_id[i["product"]]["price"]) * i["qty"] for i in b["items"])
+
+
+def product_base_c(p):
+    return cents(p["base_price"]) if p.get("base_price") else None
+
+
+def bundle_base_c(b):
+    if b.get("base_price") is not None:
+        return cents(b["base_price"])
+    by_id = {p["id"]: p for p in PRODUCTS["products"]}
+    if any(product_base_c(by_id[i["product"]]) is None for i in b["items"]):
+        return None
+    return sum(product_base_c(by_id[i["product"]]) * i["qty"] for i in b["items"])
 
 
 def bundle_stock(b):
@@ -359,7 +402,6 @@ def product_card(p, lang, compact=False):
     ui = T[lang]["ui"]
     price_c = cents(p["price"])
     unit_c = round(price_c / p["size_l"])
-    base = cents(p["base_price"]) if p.get("base_price") else None
     stock = p["stock"]
     extra = "" if p.get("online", True) else f'<p class="note">{esc(ui["pickup_only"])}</p>'
     desc = "" if compact else f'<p class="card__desc">{esc(p["description"][lang])}</p>'
@@ -369,7 +411,7 @@ def product_card(p, lang, compact=False):
   <div class="card__body">
     <h3 class="card__title">{esc(product_name(p, lang))}</h3>
     {desc}
-    <p class="card__price">{price_block(price_c, lang, base, p.get('base_price_date', ''))}
+    <p class="card__price">{price_block(price_c, lang, product_base_c(p), base_date(p) if SITE['pricing']['show_base_price'] else '')}
       <span class="unit">{esc(fill(ui['unit_price'], lang, {'price': money(unit_c)}))}</span></p>
     {extra}
     <div class="card__buy">{add_button(p['id'], stock, lang)} {left}</div>
@@ -387,7 +429,7 @@ def bundle_card(b, lang):
   <div class="card__art card__art--set">{art}</div>
   <div class="card__body">
     <h3 class="card__title">{esc(b['name'][lang])}</h3>
-    <p class="card__price">{price_block(price_c, lang)}</p>
+    <p class="card__price">{price_block(price_c, lang, bundle_base_c(b), base_date(b) if SITE['pricing']['show_base_price'] else '')}</p>
     {note}
     <div class="card__buy">{add_button(b['id'], bundle_stock(b), lang)}</div>
   </div>
@@ -408,6 +450,23 @@ def bundles_grid(lang):
             f'<div class="grid grid--3">{cards}</div></section>')
 
 
+def ship_cell(zone, parcel_id, lang):
+    price = cents(zone["prices"][parcel_id])
+    if not SITE["pricing"]["show_base_price"]:
+        return f'<span class="price price--table">{money(price)}</span>'
+    base = cents(zone.get("base_prices", zone["prices"])[parcel_id])
+    label = esc(T[lang]["ui"]["base_short"])
+    return (f'<span class="price price--table">{money(price)}</span>'
+            f'<span class="base-price">{label} {money(base)}</span>')
+
+
+def shipping_base_note(lang):
+    if not SITE["pricing"]["show_base_price"]:
+        return ""
+    d = SHIPPING.get("base_price_date") or base_date()
+    return f'<p class="note">{esc(fill(T[lang]["ui"]["base_note"], lang, {"date": fmt_date(d, lang)}))}</p>'
+
+
 def shipping_table(lang):
     pg = T[lang]["pages"]["shipping"]
     heads = []
@@ -418,10 +477,11 @@ def shipping_table(lang):
     rows = []
     for z in SHIPPING["zones"]:
         names = sorted(COUNTRIES[c][lang] for c in z["countries"])
-        tds = "".join(f"<td>{money(cents(z['prices'][p['id']]))}</td>" for p in SHIPPING["parcels"])
+        tds = "".join(f"<td>{ship_cell(z, p['id'], lang)}</td>" for p in SHIPPING["parcels"])
         rows.append(f'<tr><th scope="row">{esc(", ".join(names))}</th>{tds}<td>{esc(z.get("days", ""))}</td></tr>')
     return (f'<div class="table-wrap"><table class="ship"><thead><tr><th scope="col">{esc(pg["col_zone"])}</th>'
-            f'{th}<th scope="col">{esc(pg["col_days"])}</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>')
+            f'{th}<th scope="col">{esc(pg["col_days"])}</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>'
+            + shipping_base_note(lang))
 
 
 def harvest_facts(lang):
@@ -446,10 +506,12 @@ def catalog_json(lang):
     items = []
     for p in active_products():
         items.append({"id": p["id"], "name": product_name(p, lang), "price": cents(p["price"]),
-                      "stock": p["stock"], "online": p.get("online", True), "size": p["size_l"]})
+                      "stock": p["stock"], "online": p.get("online", True), "size": p["size_l"],
+                      "base": base_text(product_base_c(p), base_date(p), lang) if SITE["pricing"]["show_base_price"] else ""})
     for b in active_bundles():
         items.append({"id": b["id"], "name": b["name"][lang], "price": bundle_price_c(b),
-                      "stock": bundle_stock(b), "online": True, "set": True})
+                      "stock": bundle_stock(b), "online": True, "set": True,
+                      "base": base_text(bundle_base_c(b), base_date(b), lang) if SITE["pricing"]["show_base_price"] else ""})
     shippable = sorted({c for z in SHIPPING["zones"] for c in z["countries"]}, key=lambda c: COUNTRIES[c][lang])
     data = {
         "lang": lang,
@@ -594,6 +656,11 @@ def build_page(page_id, tpl_name, lang, ver):
     }
     out = render(template("base.html"), base_ctx, lang)
     check_banned(out, f"{page_id}/{lang}")
+    if SITE["pricing"]["show_base_price"]:
+        n_price = len(re.findall(r'class="price[ "]', out))
+        n_base = len(re.findall(r'class="base-price"', out))
+        if n_price != n_base:
+            die(f"{page_id}/{lang}: {n_price} prices but {n_base} base prices")
     write(out_path(page_id, lang), out)
 
 
@@ -671,7 +738,7 @@ def cjenik_csv():
         pc = cents(p["price"])
         rows.append(";".join([p["id"], product_name(p, "hr"), f"{p['size_l']:g}".replace(".", ","), "l",
                               fmt(pc), fmt(round(pc / p["size_l"])), "NE",
-                              fmt(cents(p.get("base_price") or p["price"])), p.get("base_price_date", "")]))
+                              fmt(cents(p.get("base_price") or p["price"])), fmt_date(base_date(p), "hr")]))
     write(os.path.join(DIST, f.lstrip("/")), "\r\n".join(rows) + "\r\n", bom=True)
 
 

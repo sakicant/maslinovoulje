@@ -8,6 +8,7 @@
     "Local pickup is free and offered only for the countries listed in pickup_countries."
   ],
   "placeholder": true,
+  "_base_prices": "Base price shown under each shipping price. A zone may add \"base_prices\" like \"prices\"; without it the base equals the price. Date: config/site.toml pricing.base_price_date unless base_price_date is set here.",
   "currency": "EUR",
   "parcels": [
     {"id": "p1", "max_bottles": 1, "max_weight_kg": 2.0},

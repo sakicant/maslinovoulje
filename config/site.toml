@@ -62,7 +62,11 @@ og_image = "/assets/img/og-image.png"
 [pricing]
 # Croatian "bazna cijena" rule (in force 17 Nov 2026). Applies once the business is
 # registered. When true, every shown price gets its base price line from products.json.
-show_base_price = false
+show_base_price = true
+# Date of the base price (ISO). PLACEHOLDER: today (26 Nov 2026) until launch;
+# set it to the launch day, the first day of sale. A product can override it
+# with its own base_price_date in products.json.
+base_price_date = "2026-11-26"
 # Machine-readable price list. Set to "/cjenik.csv" once the business is registered.
 cjenik_file = ""
 

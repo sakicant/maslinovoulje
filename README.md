@@ -79,7 +79,8 @@ Self-hosted only. See `static/fonts/README.txt`. Until the files are added, Geor
 - [ ] Real shipping prices (`data/shipping.json`, set `placeholder` false and remove the note in the lang files)
 - [ ] Final stock (`data/products.json`) and harvest totals (`config/site.toml`)
 - [ ] Legal pages written (business registered)
-- [ ] Croatian base price + machine-readable price list: `pricing.show_base_price` and `pricing.cjenik_file` in `config/site.toml`
+- [ ] Base prices are ON with a placeholder date (26 Nov 2026): set `pricing.base_price_date` in `config/site.toml` to the launch day
+- [ ] Machine-readable price list (`pricing.cjenik_file`) once the business is registered
 - [ ] Lab analysis done, then category wording updated
 - [ ] Real photos in `static/img/`, paths in `data/photos.json`
 - [ ] `staging = false`, rebuild, upload

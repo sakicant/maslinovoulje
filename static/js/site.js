@@ -181,6 +181,7 @@
         var info = el('div');
         info.appendChild(el('div', 'line__name', it.name));
         info.appendChild(el('div', 'line__unit', money(it.price)));
+        if (it.base) info.appendChild(el('div', 'line__base', it.base));
         var sum = el('div', 'line__sum', money(it.price * q));
         var qty = el('div', 'qty');
         var minus = el('button', '', '−'); minus.type = 'button'; minus.setAttribute('aria-label', T.decrease);

@@ -233,6 +233,8 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 .line { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: center; }
 .line__name { font-weight: 600; }
 .line__unit { font-size: .85rem; color: var(--muted); }
+.line__base { font-size: .75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.ship .base-price { display: block; font-size: .72rem; white-space: nowrap; }
 .line__sum { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
 .qty { justify-self: start; display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: var(--radius); }
 .qty button { width: 40px; height: 40px; border: 0; background: none; font-size: 1.2rem; cursor: pointer; color: var(--ink); }
