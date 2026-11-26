@@ -19,6 +19,9 @@ import tomllib
 from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+# Vercel is only a design preview: it cannot run PHP, so the order API, admin and
+# private data are left out there. The real site (FTP to PHP hosting) gets everything.
+ON_VERCEL = bool(os.environ.get("VERCEL"))
 DIST = os.path.join(ROOT, "dist")
 TEMPLATES = os.path.join(ROOT, "templates")
 
@@ -657,18 +660,22 @@ def main():
     os.makedirs(DIST, exist_ok=True)
     ver = asset_version()
     copy_tree(os.path.join(ROOT, "static"), os.path.join(DIST, "assets"))
-    copy_tree(os.path.join(ROOT, "php", "api"), os.path.join(DIST, "api"))
-    copy_tree(os.path.join(ROOT, "php", "admin"), os.path.join(DIST, SITE["admin"]["dir"]))
-    copy_tree(os.path.join(ROOT, "php", "private"), os.path.join(DIST, "private"))
-    export_private()
+    if not ON_VERCEL:
+        copy_tree(os.path.join(ROOT, "php", "api"), os.path.join(DIST, "api"))
+        copy_tree(os.path.join(ROOT, "php", "admin"), os.path.join(DIST, SITE["admin"]["dir"]))
+        copy_tree(os.path.join(ROOT, "php", "private"), os.path.join(DIST, "private"))
+        export_private()
     for pid, tpl in PAGES:
         for lang in LANGS:
             build_page(pid, tpl, lang, ver)
     robots_and_sitemap()
-    htaccess()
+    if not ON_VERCEL:
+        htaccess()
     cjenik_csv()
     n = len(PAGES) * len(LANGS)
     mode = "STAGING (noindex)" if SITE["staging"] else "LIVE (indexable)"
+    if ON_VERCEL:
+        print("Vercel preview build: PHP order API, admin and private data skipped.")
     print(f"Built {n} pages in {len(LANGS)} languages -> dist/   mode: {mode}   stock: {total_stock()} bottles")
 
 

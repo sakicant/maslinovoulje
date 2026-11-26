@@ -54,6 +54,12 @@ Payment fields (`payment_method`, `payment_provider_ref`, `paid_at`) are separat
   `php -d extension_dir=<php>/ext -d extension=pdo_sqlite -d extension=mbstring -S localhost:8091 -t dist`
 - Emails are written to `dist/private/storage/mail.log`.
 
+## Vercel preview
+
+`vercel.json` runs `python3 build.py` and serves `dist/`. Vercel cannot run PHP, so on Vercel the
+order API, admin and private data are left out: pages and design can be checked there, but the cart
+shows "total could not be calculated". Test ordering on the local PHP server or on the real hosting.
+
 ## Fonts
 
 Self-hosted only. See `static/fonts/README.txt`. Until the files are added, Georgia and system fonts are used.
