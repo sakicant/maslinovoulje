@@ -35,6 +35,9 @@ total_bottles = ""
 [selling]
 # false = shop shows the waitlist instead of the cart (before launch or between harvests)
 enabled = true
+# Show how many bottles are left (stamp counter and "X left" on each bottle).
+# Sold out still shows when stock is 0, whatever this says.
+show_stock = false
 # Bottles are held for this many hours after an order request
 hold_hours = 48
 # Owner sends payment details within this many hours

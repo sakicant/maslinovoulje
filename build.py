@@ -297,8 +297,15 @@ def stock_badge(lang, big=False):
     full = ui["sold_out"] if n <= 0 else fill(ui["stock_left"], lang, {"n": str(n)})
     word = T[lang]["pages"]["harvest"]["f_month"]
     cls = "stamp stamp--big" if big else "stamp"
-    inner = (f'<strong class="stamp__n">{n}</strong><span class="stamp__label">{esc(ui["stamp_label"])}</span>'
-             if n > 0 else f'<strong class="stamp__label stamp__label--out">{esc(ui["sold_out"])}</strong>')
+    if n <= 0:
+        inner = f'<strong class="stamp__label stamp__label--out">{esc(ui["sold_out"])}</strong>'
+    elif SITE["selling"].get("show_stock", False):
+        inner = f'<strong class="stamp__n">{n}</strong><span class="stamp__label">{esc(ui["stamp_label"])}</span>'
+    else:
+        # no bottle count for now (owner, 26 Nov 2026): the stamp just says "Harvest 2026"
+        full = f"{word} {YEAR}"
+        return (f'<div class="{cls}" role="img" aria-label="{esc(full)}"><span class="stamp__ring" aria-hidden="true">{esc(word)}</span>'
+                f'<span aria-hidden="true" class="stamp__inner"><strong class="stamp__n stamp__n--year">{YEAR}</strong></span></div>')
     return (f'<div class="{cls}" role="img" aria-label="{esc(full)}"><span class="stamp__ring" aria-hidden="true">{esc(word)} {YEAR}</span>'
             f'<span aria-hidden="true" class="stamp__inner">{inner}</span></div>')
 
@@ -349,7 +356,7 @@ def product_card(p, lang, compact=False):
     stock = p["stock"]
     extra = "" if p.get("online", True) else f'<p class="note">{esc(ui["pickup_only"])}</p>'
     desc = "" if compact else f'<p class="card__desc">{esc(p["description"][lang])}</p>'
-    left = "" if stock <= 0 else f'<span class="card__left">{esc(fill(ui["stock_bottle"], lang, {"n": str(stock)}))}</span>'
+    left = "" if stock <= 0 or not SITE["selling"].get("show_stock", False) else f'<span class="card__left">{esc(fill(ui["stock_bottle"], lang, {"n": str(stock)}))}</span>'
     return f"""<article class="card" id="{esc(p['id'])}">
   <div class="card__art">{bottle_svg(p['size_l'])}</div>
   <div class="card__body">
