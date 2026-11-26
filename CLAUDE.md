@@ -15,7 +15,7 @@ Read README.md first. The original planning brief is the source of truth for fac
 
 - Only the harvest facts from the brief. Mark anything else as a placeholder.
 - Banned until cleared: extra virgin, variety names (Oblica), cold pressed / cold extraction, organic / bio / untreated, place name in the product name. `build.py` checks rendered pages.
-- No hollow trunks on the website (text or photos). "Pressed the same night" is not a general claim: only the batch 1 fact on the harvest page.
+- No hollow trunks on the website (text or photos). "Pressed the same night" is not used anywhere (sometimes a few days pass before pressing).
 - Until now the oil was shared within the family, with neighbours and friends (not "sold for two years").
 - No em dashes in any language.
 - The owner answers in English and Croatian only. Never claim German support.

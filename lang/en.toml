@@ -36,8 +36,8 @@ unit_price = "{price} per litre"
 add_to_cart = "Add to cart"
 added = "Added to cart"
 view_cart = "View cart"
-sets_title = "Sets"
-sets_intro = "Shipping a single small bottle costs almost as much as the oil. Sets travel better."
+sets_title = "Gift sets"
+sets_intro = "Shipping a single small bottle costs almost as much as the oil. Gift sets travel better."
 set_price_note = "Same price as the bottles bought one by one"
 pickup_only = "Local pickup only"
 base_price = "Price on {date}: {price}"
@@ -49,6 +49,7 @@ footer_made = "Made by the family in Piramatovci, Croatia."
 footer_legal = "Legal"
 eu_only = "We ship within the EU."
 back_home = "Back to the home page"
+footer_credit = "Website created by"
 
 [cart]
 title = "Your cart"
@@ -122,10 +123,10 @@ We pick in November, two or three of us, with hand-held shakers and nets. The ol
 Until now we have shared this oil only within the family, with neighbours and friends. Now you can order it home.
 """
 bottles_title = "Three bottles"
-bottles_more = "See all bottles and sets"
+bottles_more = "See all bottles and gift sets"
 place_title = "Where it comes from"
 place = """
-Piramatovci lies in the hills behind Skradin, close to Krka National Park. The oil is from one place and one family.
+Piramatovci lies near Skradin and Krka National Park. The oil is from one place and one family.
 """
 limited_title = "When it is gone, it is gone"
 limited = """
@@ -135,8 +136,8 @@ One harvest gives a few hundred bottles. We do not buy in oil from anyone else, 
 [pages.shop]
 slug = "shop"
 title = "Order {category} | {brand}"
-description = "Order bottles of {brand} {category}: 0.25 L, 0.5 L and 1 L, and sets. Shipped within the EU."
-h1 = "Bottles and sets"
+description = "Order bottles of {brand} {category}: 0.25 L, 0.5 L and 1 L, and gift sets. Shipped within the EU."
+h1 = "Bottles and gift sets"
 lead = "Shipping is calculated in the cart before you send anything. [[VAT note follows business registration]]"
 
 [pages.story]
@@ -167,7 +168,7 @@ Fresh oil is cloudy. Over the following months it settles, and we rack it off it
 """
 place_title = "The place"
 place = """
-Piramatovci is a village in the hills behind Skradin, near Krka National Park, in Šibenik-Knin County, Croatia.
+Piramatovci is a village near Skradin and Krka National Park, in Šibenik-Knin County, Croatia.
 """
 
 [pages.harvest]
@@ -182,7 +183,7 @@ f_month_v = "November {year}"
 f_pickers = "Picked by"
 f_pickers_v = "Our family, two to three people, with hand-held shakers and nets"
 f_batch1 = "First batch"
-f_batch1_v = "548 kg of olives, pressed the same night: 65 litres of oil"
+f_batch1_v = "548 kg of olives: 65 litres of oil"
 f_batch2 = "Second batch"
 f_batch2_v = "About 420 kg of olives, pressed on 26 November {year}. Result to follow."
 f_total = "Season total"

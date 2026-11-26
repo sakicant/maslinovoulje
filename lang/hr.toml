@@ -25,8 +25,8 @@ unit_price = "{price} po litri"
 add_to_cart = "U košaricu"
 added = "Dodano u košaricu"
 view_cart = "Košarica"
-sets_title = "Paketi"
-sets_intro = "Slanje jedne male boce košta gotovo koliko i ulje. Paketi putuju isplativije."
+sets_title = "Poklon paketi"
+sets_intro = "Slanje jedne male boce košta gotovo koliko i ulje. Poklon paketi putuju isplativije."
 set_price_note = "Ista cijena kao boce kupljene pojedinačno"
 pickup_only = "Samo osobno preuzimanje"
 base_price = "Cijena {date}: {price}"
@@ -38,6 +38,7 @@ footer_made = "Obitelj iz Piramatovaca, Hrvatska."
 footer_legal = "Pravne informacije"
 eu_only = "Dostavljamo unutar EU."
 back_home = "Natrag na početnu"
+footer_credit = "Izrada web stranice"
 
 [cart]
 title = "Vaša košarica"
@@ -111,10 +112,10 @@ Beremo u studenom, dvoje ili troje nas, ručnim tresačicama i mrežama. Masline
 Do sada smo ovo ulje dijelili samo unutar obitelji, sa susjedima i prijateljima. Sada ga možete naručiti kući.
 """
 bottles_title = "Tri boce"
-bottles_more = "Sve boce i paketi"
+bottles_more = "Sve boce i poklon paketi"
 place_title = "Odakle dolazi"
 place = """
-Piramatovci su u brdima iza Skradina, blizu Nacionalnog parka Krka. Ulje je s jednog mjesta i od jedne obitelji.
+Piramatovci su u blizini Skradina i Nacionalnog parka Krka. Ulje je s jednog mjesta i od jedne obitelji.
 """
 limited_title = "Kad ga nestane, nema ga"
 limited = """
@@ -124,8 +125,8 @@ Jedna berba daje nekoliko stotina boca. Ne otkupljujemo ulje od drugih. Kad se b
 [pages.shop]
 slug = "ulje"
 title = "Naručite {category} | {brand}"
-description = "Naručite {brand} {category}: boce od 0,25 l, 0,5 l i 1 l te pakete. Dostava unutar EU."
-h1 = "Boce i paketi"
+description = "Naručite {brand} {category}: boce od 0,25 l, 0,5 l i 1 l te poklon pakete. Dostava unutar EU."
+h1 = "Boce i poklon paketi"
 lead = "Cijenu dostave vidite u košarici prije nego što išta pošaljete. [[Napomena o PDV-u slijedi nakon registracije]]"
 
 [pages.story]
@@ -156,7 +157,7 @@ Svježe ulje je mutno. Tijekom sljedećih mjeseci se taloži, a mi ga pretačemo
 """
 place_title = "Mjesto"
 place = """
-Piramatovci su selo u brdima iza Skradina, blizu Nacionalnog parka Krka, u Šibensko-kninskoj županiji.
+Piramatovci su selo u blizini Skradina i Nacionalnog parka Krka, u Šibensko-kninskoj županiji.
 """
 
 [pages.harvest]
@@ -171,7 +172,7 @@ f_month_v = "Studeni {year}."
 f_pickers = "Brali su"
 f_pickers_v = "Članovi obitelji, dvoje do troje, ručnim tresačicama i mrežama"
 f_batch1 = "Prva šarža"
-f_batch1_v = "548 kg maslina, prešano iste noći: 65 litara ulja"
+f_batch1_v = "548 kg maslina: 65 litara ulja"
 f_batch2 = "Druga šarža"
 f_batch2_v = "Oko 420 kg maslina, prešano 26. studenoga {year}. Rezultat slijedi."
 f_total = "Ukupno u sezoni"
