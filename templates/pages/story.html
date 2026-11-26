@@ -9,6 +9,13 @@
     <div class="prose">
       <h2>{{ pg.family_title }}</h2>
       {{ pg.family|md }}
+    </div>
+    {{ photo:family }}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap split split--rev">
+    <div class="prose">
       <h2>{{ pg.grove_title }}</h2>
       {{ pg.grove|md }}
     </div>
@@ -16,16 +23,16 @@
   </div>
 </section>
 <section class="section section--sage">
-  <div class="wrap split split--rev">
+  <div class="wrap split">
     <div class="prose">
       <h2>{{ pg.harvest_title }}</h2>
       {{ pg.harvest|md }}
     </div>
-    {{ photo:shakers }}
+    {{ photo:shaking }}
   </div>
 </section>
 <section class="section">
-  <div class="wrap split">
+  <div class="wrap split split--rev">
     <div class="prose">
       <h2>{{ pg.mill_title }}</h2>
       {{ pg.mill|md }}
@@ -34,7 +41,7 @@
   </div>
 </section>
 <section class="section section--tight">
-  <div class="wrap split split--rev">
+  <div class="wrap split">
     <div class="prose">
       <h2>{{ pg.place_title }}</h2>
       {{ pg.place|md }}

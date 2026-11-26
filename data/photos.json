@@ -85,7 +85,7 @@
   "shakers": {
     "src": "/assets/img/photos/shakers.jpg",
     "ratio": "4/3",
-    "status": "privremeno",
+    "status": "privremeno (trenutno se ne koristi)",
     "source": "kopirano/PXL_20221115_103020948.MP.jpg",
     "todo": "Hand-held olive shaker on the harvest net",
     "alt": {
@@ -104,6 +104,42 @@
       "en": "Canisters of fresh, still cloudy olive oil",
       "de": "Kanister mit frischem, noch trübem Olivenöl",
       "hr": "Kanisteri svježeg, još mutnog maslinovog ulja"
+    }
+  },
+  "family": {
+    "src": "/assets/img/photos/family.jpg",
+    "ratio": "4/3",
+    "status": "trajno",
+    "source": "kopirano/PXL_20221126_101846179.MP.jpg",
+    "todo": "The family together in the grove",
+    "alt": {
+      "en": "The Šakić family together in the olive grove",
+      "de": "Die Familie Šakić gemeinsam unter den Olivenbäumen",
+      "hr": "Obitelj Šakić zajedno među maslinama"
+    }
+  },
+  "shaking": {
+    "src": "/assets/img/photos/shaking.jpg",
+    "ratio": "4/3",
+    "status": "trajno",
+    "source": "kopirano/PXL_20221126_091235826.MP.jpg",
+    "todo": "Two of the family shaking a tree onto the nets",
+    "alt": {
+      "en": "Two of the family shaking an olive tree onto the nets",
+      "de": "Zwei aus der Familie schütteln einen Olivenbaum auf die Netze",
+      "hr": "Dvoje iz obitelji tresu maslinu na mreže"
+    }
+  },
+  "sorting": {
+    "src": "/assets/img/photos/sorting.jpg",
+    "ratio": "3/4",
+    "status": "trajno",
+    "source": "kopirano/20241110_102309.jpg",
+    "todo": "Sorting freshly picked olives, the valley behind",
+    "alt": {
+      "en": "Sorting freshly picked olives, with the valley near Skradin behind",
+      "de": "Frisch geerntete Oliven werden sortiert, dahinter das Tal bei Skradin",
+      "hr": "Razvrstavanje tek ubranih maslina, iza je dolina kod Skradina"
     }
   }
 }
