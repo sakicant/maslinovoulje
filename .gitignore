@@ -5,3 +5,4 @@ __pycache__/
 *.sqlite
 *.log
 .claude/launch.json
+design/logos/preview.html

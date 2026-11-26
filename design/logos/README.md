@@ -11,3 +11,10 @@
 These are concepts. The fonts fall back to Georgia/Arial where Playfair Display / Space Grotesk are not installed.
 The chosen one gets redrawn with outlined text (paths) before it goes on labels.
 No place name in any logo: a place name on the bottle can read as a regional origin claim.
+
+## Generated tree logos (A to F)
+
+`make_tree.py` grows an original olive tree (twisted trunk, tapered limbs, roots, individual leaves)
+and writes `tree-A-...svg` to `tree-F-...svg` plus `preview.html` (open it in a browser).
+Each version has a fixed seed, so a chosen tree can be regenerated exactly and then refined.
+Run: `python design/logos/make_tree.py`
