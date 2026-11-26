@@ -1,0 +1,11 @@
+<section class="section section--head">
+  <div class="wrap narrow">
+    <h1>{{ pg.h1 }}</h1>
+    <p class="lead">{{ pg.lead }}</p>
+    <dl class="facts facts--contact">
+      <div><dt>{{ pg.email_label }}</dt><dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd></div>
+      <div><dt>{{ pg.phone_label }}</dt><dd><a href="tel:{{ site.phone_href }}">{{ site.phone }}</a></dd></div>
+      <div><dt>{{ pg.address_label }}</dt><dd>{{ site.address|raw }}</dd></div>
+    </dl>
+  </div>
+</section>

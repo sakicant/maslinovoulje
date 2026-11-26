@@ -1,0 +1,14 @@
+<section class="section section--head taste">
+  <div class="wrap narrow">
+    {{ x.stamp|raw }}
+    <h1>{{ pg.h1 }}</h1>
+    <p class="lead">{{ pg.lead }}</p>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap">
+    {{ x.products_compact|raw }}
+    <p class="actions center"><a class="btn" href="{{ url:shop }}">{{ pg.cta }}</a></p>
+    <p class="note center">{{ pg.waitlist_note }} <a href="{{ url:waitlist }}">{{ ui.waitlist_cta }}</a></p>
+  </div>
+</section>

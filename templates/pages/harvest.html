@@ -1,0 +1,25 @@
+<section class="section section--head">
+  <div class="wrap head-row">
+    <div>
+      <h1>{{ pg.h1 }}</h1>
+      <p class="lead">{{ pg.lead }}</p>
+    </div>
+    {{ x.stamp|raw }}
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap split">
+    <div>
+      <h2 class="sr">{{ pg.facts_title }}</h2>
+      {{ x.facts|raw }}
+    </div>
+    {{ photo:fruit }}
+  </div>
+</section>
+<section class="section section--sage">
+  <div class="wrap narrow prose">
+    <h2>{{ pg.cloudy_title }}</h2>
+    {{ pg.cloudy|md }}
+    <p class="actions"><a class="btn" href="{{ url:shop }}">{{ ui.nav_shop }}</a></p>
+  </div>
+</section>

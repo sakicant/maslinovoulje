@@ -1,0 +1,47 @@
+<section class="hero">
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="kicker">{{ pg.kicker }}</p>
+      <h1>{{ pg.h1 }}</h1>
+      <p class="lead">{{ pg.lead }}</p>
+      <p class="actions">
+        <a class="btn" href="{{ url:shop }}">{{ pg.cta_shop }}</a>
+        <a class="btn btn--ghost" href="{{ url:story }}">{{ pg.cta_story }}</a>
+      </p>
+    </div>
+    <div class="hero__media">
+      {{ photo:hero }}
+      {{ x.stamp|raw }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>{{ pg.intro_title }}</h2>
+      {{ pg.intro|md }}
+    </div>
+    {{ photo:hollow_trunk }}
+  </div>
+</section>
+
+<section class="section section--sage">
+  <div class="wrap">
+    <h2>{{ pg.bottles_title }}</h2>
+    {{ x.products_compact|raw }}
+    <p class="more"><a href="{{ url:shop }}">{{ pg.bottles_more }}</a></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split split--rev">
+    <div class="prose">
+      <h2>{{ pg.place_title }}</h2>
+      {{ pg.place|md }}
+      <h2>{{ pg.limited_title }}</h2>
+      {{ pg.limited|md }}
+    </div>
+    {{ photo:place }}
+  </div>
+</section>

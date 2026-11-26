@@ -1,0 +1,45 @@
+{
+  "_readme": [
+    "PLACEHOLDER PRICES. There is no GLS contract yet. Replace every price before launch.",
+    "A parcel is chosen by bottle count AND total weight (product weight_kg in products.json).",
+    "The smallest parcel that fits both limits is used. Orders larger than the biggest parcel",
+    "are split into several of the biggest parcels plus one parcel for the rest.",
+    "EU countries only. Remove a country from its zone to stop shipping there.",
+    "Local pickup is free and offered only for the countries listed in pickup_countries."
+  ],
+  "placeholder": true,
+  "currency": "EUR",
+  "parcels": [
+    {"id": "p1", "max_bottles": 1, "max_weight_kg": 2.0},
+    {"id": "p2", "max_bottles": 2, "max_weight_kg": 3.5},
+    {"id": "p3", "max_bottles": 3, "max_weight_kg": 5.5},
+    {"id": "p6", "max_bottles": 6, "max_weight_kg": 11.0}
+  ],
+  "zones": [
+    {
+      "id": "hr",
+      "countries": ["HR"],
+      "prices": {"p1": 5.00, "p2": 6.00, "p3": 7.00, "p6": 9.00},
+      "days": "1-2"
+    },
+    {
+      "id": "z1",
+      "countries": ["SI", "AT", "HU", "SK", "CZ", "DE", "IT"],
+      "prices": {"p1": 12.00, "p2": 14.00, "p3": 15.00, "p6": 19.00},
+      "days": "2-4"
+    },
+    {
+      "id": "z2",
+      "countries": ["PL", "BE", "NL", "LU", "FR", "DK"],
+      "prices": {"p1": 15.00, "p2": 17.00, "p3": 19.00, "p6": 24.00},
+      "days": "3-5"
+    },
+    {
+      "id": "z3",
+      "countries": ["ES", "PT", "SE", "FI", "IE", "EE", "LV", "LT", "RO", "BG", "GR", "CY", "MT"],
+      "prices": {"p1": 19.00, "p2": 22.00, "p3": 24.00, "p6": 30.00},
+      "days": "4-7"
+    }
+  ],
+  "pickup_countries": ["HR"]
+}

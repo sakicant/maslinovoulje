@@ -1,0 +1,379 @@
+# Hrvatski tekst. Oznake i pravila: vidi lang/en.toml.
+
+code = "hr"
+locale = "hr_HR"
+label = "Hrvatski"
+
+[ui]
+skip = "Preskoči na sadržaj"
+menu = "Izbornik"
+nav_home = "Početna"
+nav_shop = "Ulje"
+nav_story = "Naša priča"
+nav_harvest = "Berba {year}"
+nav_shipping = "Dostava"
+nav_contact = "Kontakt"
+nav_cart = "Košarica"
+lang_label = "Jezik"
+staging_banner = "Samo pregled. Stranica još nije javna."
+stock_left = "Berba {year}: još {n} boca"
+stamp_label = "boca preostalo"
+stock_bottle = "još {n}"
+sold_out = "Rasprodano"
+per_litre = "po litri"
+unit_price = "{price} po litri"
+add_to_cart = "U košaricu"
+added = "Dodano u košaricu"
+view_cart = "Košarica"
+sets_title = "Paketi"
+sets_intro = "Slanje jedne male boce košta gotovo koliko i ulje. Paketi putuju isplativije."
+set_price_note = "Ista cijena kao boce kupljene pojedinačno"
+pickup_only = "Samo osobno preuzimanje"
+base_price = "Cijena {date}: {price}"
+price_list = "Cjenik (CSV)"
+photo_todo = "Fotografija slijedi"
+origin = "Podrijetlo: Hrvatska"
+waitlist_cta = "Lista čekanja"
+footer_made = "Obitelj iz Piramatovaca, Hrvatska."
+footer_legal = "Pravne informacije"
+eu_only = "Dostavljamo unutar EU."
+back_home = "Natrag na početnu"
+
+[cart]
+title = "Vaša košarica"
+empty = "Košarica je prazna."
+go_shop = "Odaberite boce"
+qty = "Količina"
+remove = "Ukloni"
+decrease = "Jedna manje"
+increase = "Jedna više"
+country = "Država dostave"
+choose_country = "Odaberite državu"
+delivery = "Dostava"
+delivery_address = "Dostava na adresu"
+delivery_pickup = "Preuzimanje u Piramatovcima (besplatno)"
+pickup_note = "Termin preuzimanja dogovaramo e-poštom ili telefonom."
+subtotal = "Boce"
+shipping = "Dostava"
+total = "Ukupno"
+total_note = "Ovo je puna cijena s dostavom. Sada se ništa ne naplaćuje."
+calculating = "Računam..."
+need_country = "Odaberite državu da biste vidjeli cijenu dostave."
+quote_error = "Ukupni iznos trenutno se ne može izračunati. Pokušajte ponovno za trenutak."
+details_title = "Vaši podaci"
+name = "Ime i prezime"
+email = "E-pošta"
+phone = "Telefon (neobavezno)"
+address = "Ulica i kućni broj"
+address2 = "Dodatak adresi (neobavezno)"
+postal = "Poštanski broj"
+city = "Mjesto"
+note = "Napomena (neobavezno)"
+consent = "Pročitao/la sam [uvjete prodaje](page:terms) i [pravila privatnosti](page:privacy)."
+submit = "Pošalji upit za narudžbu"
+sending = "Šaljem..."
+how_title = "Kako naručiti"
+how = """
+- Pošaljete upit za narudžbu. Na ovoj stranici se ništa ne plaća.
+- Odmah dobijete e-poruku da smo upit primili.
+- U roku od {reply_hours} sata šaljemo vam podatke za plaćanje.
+- Boce čuvamo za vas {hold_hours} sati.
+- Nakon uplate šaljemo paket i broj za praćenje pošiljke.
+"""
+error_generic = "Nešto nije u redu. Pokušajte ponovno ili pišite na {email}."
+error_stock = "Nemamo više toliko boca. Količine su prilagođene."
+error_rate = "Previše pokušaja. Pričekajte nekoliko minuta."
+error_fields = "Provjerite označena polja."
+not_available = "Narudžbe trenutno nisu otvorene."
+
+[waitlist]
+email = "Vaša e-pošta"
+consent = "Slažem se da mi pošaljete jednu poruku kad boce budu dostupne. Detalji u [pravilima privatnosti](page:privacy)."
+submit = "Obavijestite me"
+thanks = "Hvala. Javit ćemo vam se jednom, kad boce budu dostupne."
+error = "Nije uspjelo. Provjerite adresu i pokušajte ponovno."
+
+[pages.home]
+slug = ""
+title = "{brand} {category} iz Piramatovaca"
+description = "Obiteljsko maslinovo ulje sa starih stabala u Piramatovcima kod Skradina. Nekoliko stotina boca po berbi, dostava unutar EU."
+kicker = "Berba {year} · Piramatovci, Hrvatska"
+h1 = "Maslinovo ulje s naših starih stabala"
+lead = "Nekoliko stotina boca godišnje. Obitelj ih bere kod Skradina i Nacionalnog parka Krka, a ulje se preša iste noći u lokalnoj uljari."
+cta_shop = "Naručite boce"
+cta_story = "Naša priča"
+intro_title = "Što je to"
+intro = """
+Maslinovo ulje sa stabala na našoj obiteljskoj zemlji u Piramatovcima, selu iznad Skradina. Neka su stabla toliko stara da su im debla šuplja.
+
+Beremo u studenom, dvoje ili troje nas, ručnim tresačicama i mrežama. Masline vozimo u lokalnu uljaru i prešaju se iste noći.
+
+Dvije godine prodavali smo ovo ulje samo susjedima i prijateljima, u bocama od litre. Sada ga možete naručiti kući.
+"""
+bottles_title = "Tri boce"
+bottles_more = "Sve boce i paketi"
+place_title = "Odakle dolazi"
+place = """
+Piramatovci su u brdima iza Skradina, blizu Nacionalnog parka Krka. Ulje je s jednog mjesta i od jedne obitelji.
+"""
+limited_title = "Kad ga nestane, nema ga"
+limited = """
+Jedna berba daje nekoliko stotina boca. Ne otkupljujemo ulje od drugih. Kad se boce ove godine prodaju, sljedeće stižu sa sljedećom berbom.
+"""
+
+[pages.shop]
+slug = "ulje"
+title = "Naručite {category} | {brand}"
+description = "Naručite {brand} {category}: boce od 0,25 l, 0,5 l i 1 l te pakete. Dostava unutar EU."
+h1 = "Boce i paketi"
+lead = "Cijenu dostave vidite u košarici prije nego što išta pošaljete. [[Napomena o PDV-u slijedi nakon registracije]]"
+
+[pages.story]
+slug = "nasa-prica"
+title = "Naša priča | {brand} {category}"
+description = "Obitelj, stare masline u Piramatovcima kod Skradina i berba prešana iste noći."
+h1 = "Naša priča"
+lead = "Mala obiteljska berba sa starih stabala kod Skradina."
+family_title = "Obitelj"
+family = """
+Mi smo obitelj {brand} iz Piramatovaca. Masline rastu na našoj obiteljskoj zemlji. [[Vlasnik dopisuje: tko je posadio stabla, otkad su u obitelji, tko je danas u obitelji.]]
+"""
+grove_title = "Stabla"
+grove = """
+Mnoga naša stabla su stara. Neka imaju debla šuplja od starosti, a i dalje svake godine rađaju.
+"""
+harvest_title = "Berba"
+harvest = """
+Beremo u studenom. Dvoje ili troje nas radi ručnim tresačicama, a ispod stabala prostiremo mreže da uhvate plodove.
+
+{year}. plodovi su bili uglavnom zeleni, a neki su počeli ljubičastiti. Nakon dva tjedna kiše rod je bio obilan.
+"""
+mill_title = "Prešano iste noći"
+mill = """
+Masline vozimo u lokalnu uljaru isti dan kad ih uberemo i prešaju se iste noći.
+
+Svježe ulje je mutno. Tijekom sljedećih mjeseci se taloži, a mi ga pretačemo s taloga.
+"""
+place_title = "Mjesto"
+place = """
+Piramatovci su selo u brdima iza Skradina, blizu Nacionalnog parka Krka, u Šibensko-kninskoj županiji.
+"""
+
+[pages.harvest]
+slug = "berba"
+title = "Berba {year} | {brand} {category}"
+description = "Podaci o berbi {year}: datumi, šarže, kilogrami maslina i litre ulja."
+h1 = "Berba {year}"
+lead = "Što se dogodilo ove godine, u brojkama."
+facts_title = "Podaci"
+f_month = "Berba"
+f_month_v = "Studeni {year}."
+f_pickers = "Brali su"
+f_pickers_v = "Članovi obitelji, dvoje do troje, ručnim tresačicama i mrežama"
+f_batch1 = "Prva šarža"
+f_batch1_v = "548 kg maslina, prešano iste noći: 65 litara ulja"
+f_batch2 = "Druga šarža"
+f_batch2_v = "Oko 420 kg maslina, prešano 26. studenoga {year}. Rezultat slijedi."
+f_total = "Ukupno u sezoni"
+f_total_expected = "Očekuje se otprilike 110 do 195 litara"
+f_bottles = "Boce"
+f_fruit = "Plod"
+f_fruit_v = "Uglavnom zelen, dio počeo ljubičastiti"
+f_year = "Godina"
+f_year_v = "Obilan rod nakon dva tjedna kiše"
+pending = "Konačan broj slijedi"
+cloudy_title = "Zašto je svježe ulje mutno"
+cloudy = """
+Ulje ravno iz uljare nosi sitne čestice ploda. Tijekom sljedećih mjeseci one se slegnu, a mi bistro ulje pretočimo s taloga.
+"""
+
+[pages.cart]
+slug = "kosarica"
+title = "Košarica | {brand}"
+description = "Vaša košarica i upit za narudžbu."
+h1 = "Košarica i upit za narudžbu"
+
+[pages.received]
+slug = "narudzba-zaprimljena"
+title = "Upit za narudžbu zaprimljen | {brand}"
+description = "Vaš upit za narudžbu je stigao do nas."
+h1 = "Hvala. Vaš upit za narudžbu je stigao."
+ref_label = "Broj vašeg upita"
+text = """
+**Ništa nije naplaćeno.** Ovo je bio upit za narudžbu, ne plaćanje.
+
+Poslali smo vam potvrdu e-poštom. Ako je ne vidite, provjerite mapu neželjene pošte.
+
+U roku od {reply_hours} sata šaljemo vam podatke za plaćanje. Boce čuvamo za vas {hold_hours} sati.
+"""
+
+[pages.taste]
+slug = "kusanje"
+title = "Kušali ste ga kod Skradina | {brand}"
+description = "Kušali ste naše maslinovo ulje kod Skradina. Naručite ga kući, dostava unutar EU."
+h1 = "Kušali ste ga kod Skradina. Naručite ga kući."
+lead = "Ovo je ulje naše obitelji iz Piramatovaca, blizu mjesta gdje ste ga kušali. Dostavljamo unutar EU."
+cta = "Odaberite boce"
+waitlist_note = "Rasprodano ili još nije u bocama? Ostavite e-poštu i javit ćemo vam se kad bude boca."
+
+[pages.waitlist]
+slug = "lista-cekanja"
+title = "Lista čekanja | {brand}"
+description = "Jedna poruka kad sljedeće boce budu dostupne."
+h1 = "Lista čekanja"
+lead = """
+Kad je berba rasprodana ili novo ulje još nije u bocama, ovdje možete ostaviti e-poštu. Javimo vam se jednom, kad opet bude boca. Bez newslettera.
+"""
+
+[pages.shipping]
+slug = "dostava"
+title = "Dostava | {brand}"
+description = "Kamo dostavljamo, koliko košta i koliko traje. Samo EU."
+h1 = "Dostava"
+lead = "Dostavljamo unutar Europske unije. Cijene su po paketu, ne po boci."
+countries_title = "Države i cijene"
+placeholder_note = "[[Ove cijene dostave su privremene dok se ne potpiše ugovor s dostavnom službom.]]"
+col_zone = "Države"
+col_parcel = "{n} boce"
+col_parcel_one = "1 boca"
+col_days = "Radni dani"
+larger_note = "Veće narudžbe pakiramo u više paketa."
+pickup_title = "Osobno preuzimanje"
+pickup = """
+U Hrvatskoj boce možete besplatno preuzeti u Piramatovcima. Termin dogovaramo e-poštom ili telefonom.
+"""
+times_title = "Rok dostave"
+times = """
+[[Rokovi dostave potvrđuju se s dostavnom službom.]] Paket šaljemo nakon što stigne uplata.
+"""
+breakage_title = "Ako se boca razbije"
+breakage = """
+[[Pravila za razbijene boce slijede. Na primjer: fotografija u roku 48 sati od dostave, a mi bocu zamijenimo ili vratimo novac.]]
+"""
+
+[pages.contact]
+slug = "kontakt"
+title = "Kontakt | {brand}"
+description = "Pišite ili nazovite obitelj {brand} u Piramatovcima kod Skradina."
+h1 = "Kontakt"
+lead = "Odgovaramo na hrvatskom i engleskom."
+email_label = "E-pošta"
+phone_label = "Telefon"
+address_label = "Adresa"
+
+[pages.terms]
+slug = "uvjeti-prodaje"
+title = "Uvjeti prodaje | {brand}"
+description = "Uvjeti prodaje."
+h1 = "Uvjeti prodaje"
+body = """
+[[Privremeno. Uvjeti prodaje pišu se nakon registracije djelatnosti.]]
+
+Obuhvatit će:
+
+- Tko je prodavatelj
+- Kako upit za narudžbu postaje ugovor (nakon uplate)
+- Cijene, troškove dostave i načine plaćanja
+- Dostavu i prijelaz rizika
+- Razbijene boce i reklamacije
+- Pravo na jednostrani raskid
+"""
+
+[pages.withdrawal]
+slug = "jednostrani-raskid"
+title = "Pravo na jednostrani raskid | {brand}"
+description = "Vaše pravo na jednostrani raskid ugovora u roku od 14 dana."
+h1 = "Pravo na jednostrani raskid"
+body = """
+[[Privremeno. Obavijest o pravu na jednostrani raskid u roku od 14 dana i obrazac dodaju se nakon registracije djelatnosti.]]
+"""
+
+[pages.privacy]
+slug = "privatnost"
+title = "Pravila privatnosti | {brand}"
+description = "Kako postupamo s vašim podacima."
+h1 = "Pravila privatnosti"
+body = """
+[[Privremeno. Pravila privatnosti pišu se nakon registracije djelatnosti.]]
+
+Što stranica danas radi:
+
+- Upiti za narudžbu spremaju ime, kontakt, adresu i narudžbu, kako bismo mogli dostaviti i izdati račun.
+- Lista čekanja sprema vašu e-poštu i jezik, samo da vam javimo kad ima boca.
+- Košarica ostaje u vašem pregledniku dok je ne pošaljete.
+- Nema skripti za praćenje, oglasnih kolačića ni sadržaja trećih strana.
+- Ako ste došli preko kartice s kušanja, oznaka kartice sprema se uz narudžbu da znamo gdje ste kušali ulje.
+"""
+
+[pages.business]
+slug = "podaci-o-prodavatelju"
+title = "Podaci o prodavatelju | {brand}"
+description = "Podaci o prodavatelju."
+h1 = "Podaci o prodavatelju"
+body = """
+[[Privremeno. Oblik djelatnosti, MIBPG ili matični broj, OIB, adresa i status u sustavu PDV-a slijede nakon registracije.]]
+"""
+
+[email.order_received]
+subject = "Upit za narudžbu {ref} zaprimljen"
+body = """
+Poštovani/a {name},
+
+hvala na upitu za narudžbu {ref}. Stigao je do nas.
+
+Ovo nije plaćanje. Ništa nije naplaćeno.
+
+{items}
+
+Boce: {subtotal}
+Dostava: {shipping}
+Ukupno: {total}
+
+Dostava: {delivery}
+{address}
+
+U roku od {reply_hours} sata šaljemo vam podatke za plaćanje. Boce čuvamo za vas {hold_hours} sati.
+
+Ako nešto nije u redu, samo odgovorite na ovu poruku.
+
+Obitelj {brand}
+{email}
+"""
+
+[email.payment_request]
+subject = "Podaci za plaćanje narudžbe {ref}"
+body = """
+Poštovani/a {name},
+
+još jednom hvala na narudžbi {ref}.
+
+Ukupno s dostavom: {total}
+
+Možete platiti:
+[NAČINI PLAĆANJA: ovdje link za plaćanje karticom ili podaci za uplatu]
+
+Molimo uplatu do {pay_until}. Do tada čuvamo vaše boce.
+
+Čim uplata stigne, pakiramo paket i šaljemo vam broj za praćenje.
+
+Obitelj {brand}
+{email}
+"""
+
+[email.shipped]
+subject = "Vaša narudžba {ref} je na putu"
+body = """
+Poštovani/a {name},
+
+vaš paket je krenuo iz Piramatovaca.
+
+Broj za praćenje: {tracking}
+Broj računa: {invoice}
+
+Svježe ulje može biti mutno. To je normalno, s vremenom se slegne.
+
+Hvala što ste naručili od nas.
+
+Obitelj {brand}
+{email}
+"""

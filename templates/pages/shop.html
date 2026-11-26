@@ -1,0 +1,21 @@
+<section class="section section--head">
+  <div class="wrap head-row">
+    <div>
+      <h1>{{ pg.h1 }}</h1>
+      <p class="lead">{{ pg.lead|inline }}</p>
+      <p class="origin">{{ ui.origin }}</p>
+    </div>
+    {{ x.stamp|raw }}
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap">
+    {{ x.products|raw }}
+  </div>
+</section>
+<div class="wrap">
+  {{ x.bundles|raw }}
+</div>
+<div class="sticky-cart" data-sticky-cart hidden>
+  <a class="btn" href="{{ url:cart }}">{{ ui.view_cart }} <span data-cart-count>0</span></a>
+</div>

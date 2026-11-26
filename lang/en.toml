@@ -1,0 +1,395 @@
+# English text. One file per language; copy this file to add a language.
+#
+# Text markup (works in every multi-line text):
+#   blank line        new paragraph
+#   - item            bullet list
+#   **bold**          bold
+#   [label](page:shop)  link to another page in the same language (page ids: see build.py PAGES)
+#   [[note]]          visible placeholder box for something still OPEN
+#   {brand} {category} {year} {email} {phone}   filled from config/site.toml
+#
+# Rules: no em dashes. No "extra virgin", no variety name, no "cold pressed",
+# no "organic". Use only the harvest facts from the brief.
+
+code = "en"
+locale = "en_GB"
+label = "English"
+
+[ui]
+skip = "Skip to content"
+menu = "Menu"
+nav_home = "Home"
+nav_shop = "Shop"
+nav_story = "Our story"
+nav_harvest = "Harvest {year}"
+nav_shipping = "Shipping"
+nav_contact = "Contact"
+nav_cart = "Cart"
+lang_label = "Language"
+staging_banner = "Preview only. This site is not public yet."
+stock_left = "Harvest {year}: {n} bottles left"
+stamp_label = "bottles left"
+stock_bottle = "{n} left"
+sold_out = "Sold out"
+per_litre = "per litre"
+unit_price = "{price} per litre"
+add_to_cart = "Add to cart"
+added = "Added to cart"
+view_cart = "View cart"
+sets_title = "Sets"
+sets_intro = "Shipping a single small bottle costs almost as much as the oil. Sets travel better."
+set_price_note = "Same price as the bottles bought one by one"
+pickup_only = "Local pickup only"
+base_price = "Price on {date}: {price}"
+price_list = "Price list (CSV)"
+photo_todo = "Photo to come"
+origin = "Origin: Croatia"
+waitlist_cta = "Join the waitlist"
+footer_made = "Made by the family in Piramatovci, Croatia."
+footer_legal = "Legal"
+eu_only = "We ship within the EU."
+back_home = "Back to the home page"
+
+[cart]
+title = "Your cart"
+empty = "Your cart is empty."
+go_shop = "Choose bottles"
+qty = "Quantity"
+remove = "Remove"
+decrease = "One less"
+increase = "One more"
+country = "Destination country"
+choose_country = "Choose a country"
+delivery = "Delivery"
+delivery_address = "Delivery to your address"
+delivery_pickup = "Pickup in Piramatovci (free)"
+pickup_note = "We agree a pickup time by email or phone."
+subtotal = "Bottles"
+shipping = "Shipping"
+total = "Total"
+total_note = "This is the full price including shipping. Nothing is charged now."
+calculating = "Calculating..."
+need_country = "Choose a country to see the shipping price."
+quote_error = "The total could not be calculated right now. Please try again in a moment."
+details_title = "Your details"
+name = "Full name"
+email = "Email"
+phone = "Phone (optional)"
+address = "Street and house number"
+address2 = "Address line 2 (optional)"
+postal = "Postal code"
+city = "City"
+note = "Note (optional)"
+consent = "I have read the [terms of sale](page:terms) and the [privacy policy](page:privacy)."
+submit = "Send order request"
+sending = "Sending..."
+how_title = "How ordering works"
+how = """
+- You send an order request. No payment is taken on this site.
+- You get an email right away confirming we received it.
+- Within {reply_hours} hours we email you payment details.
+- We hold your bottles for {hold_hours} hours.
+- After payment we ship and send you the tracking number.
+"""
+error_generic = "Something went wrong. Please try again, or write to {email}."
+error_stock = "We do not have that many bottles left. The quantities have been adjusted."
+error_rate = "Too many attempts. Please wait a few minutes and try again."
+error_fields = "Please check the highlighted fields."
+not_available = "Ordering is not open at the moment."
+
+[waitlist]
+email = "Your email"
+consent = "I agree to get one email when bottles are available. Details in the [privacy policy](page:privacy)."
+submit = "Notify me"
+thanks = "Thank you. We will write to you once, when bottles are available."
+error = "That did not work. Please check the address and try again."
+
+[pages.home]
+slug = ""
+title = "{brand} {category} from Piramatovci, Croatia"
+description = "Family olive oil from old trees in Piramatovci, near Skradin. A few hundred bottles per harvest, shipped within the EU."
+kicker = "Harvest {year} · Piramatovci, Croatia"
+h1 = "Olive oil from our family's old trees"
+lead = "A few hundred bottles a year. Picked by our family near Skradin and Krka National Park, and pressed the same night at the local mill."
+cta_shop = "Order bottles"
+cta_story = "Our story"
+intro_title = "What it is"
+intro = """
+Olive oil from the trees on our family land in Piramatovci, a village above Skradin. Some of the trees are so old that their trunks have gone hollow.
+
+We pick in November, two or three of us, with hand-held shakers and nets. The olives go to the local mill and are pressed the same night.
+
+For two years we sold this oil only to neighbours and friends, in litre bottles. Now you can order it home.
+"""
+bottles_title = "Three bottles"
+bottles_more = "See all bottles and sets"
+place_title = "Where it comes from"
+place = """
+Piramatovci lies in the hills behind Skradin, close to Krka National Park. The oil is from one place and one family.
+"""
+limited_title = "When it is gone, it is gone"
+limited = """
+One harvest gives a few hundred bottles. We do not buy in oil from anyone else, so when this year's bottles are sold, the next ones come with the next harvest.
+"""
+
+[pages.shop]
+slug = "shop"
+title = "Order {category} | {brand}"
+description = "Order bottles of {brand} {category}: 0.25 L, 0.5 L and 1 L, and sets. Shipped within the EU."
+h1 = "Bottles and sets"
+lead = "Shipping is calculated in the cart before you send anything. [[VAT note follows business registration]]"
+
+[pages.story]
+slug = "our-story"
+title = "Our story | {brand} {category}"
+description = "A family, old olive trees in Piramatovci near Skradin, and a harvest pressed the same night."
+h1 = "Our story"
+lead = "A small family harvest from old trees near Skradin."
+family_title = "The family"
+family = """
+We are the {brand} family from Piramatovci. The olive trees stand on our family land. [[Owner to add: who planted the trees, how long the family has had them, who is in the family today.]]
+"""
+grove_title = "The trees"
+grove = """
+Many of our trees are old. Some have trunks hollowed out by age, and still carry fruit every year.
+"""
+harvest_title = "The harvest"
+harvest = """
+We pick in November. Two or three of us work the trees with hand-held olive shakers and lay nets underneath to catch the fruit.
+
+In {year} the fruit was mostly green, with some olives turning purple. After two weeks of rain it was a heavy crop.
+"""
+mill_title = "Pressed the same night"
+mill = """
+We take the olives to the local mill on the day we pick them, and they are pressed the same night.
+
+Fresh oil is cloudy. Over the following months it settles, and we rack it off its sediment.
+"""
+place_title = "The place"
+place = """
+Piramatovci is a village in the hills behind Skradin, near Krka National Park, in Šibenik-Knin County, Croatia.
+"""
+
+[pages.harvest]
+slug = "harvest"
+title = "Harvest {year} | {brand} {category}"
+description = "Facts from harvest {year}: dates, batches, kilograms of olives and litres of oil."
+h1 = "Harvest {year}"
+lead = "What happened this year, in numbers."
+facts_title = "Facts"
+f_month = "Harvest"
+f_month_v = "November {year}"
+f_pickers = "Picked by"
+f_pickers_v = "Our family, two to three people, with hand-held shakers and nets"
+f_batch1 = "First batch"
+f_batch1_v = "548 kg of olives, pressed the same night: 65 litres of oil"
+f_batch2 = "Second batch"
+f_batch2_v = "About 420 kg of olives, pressed on 26 November {year}. Result to follow."
+f_total = "Season total"
+f_total_expected = "Expected roughly 110 to 195 litres"
+f_bottles = "Bottles"
+f_fruit = "Fruit"
+f_fruit_v = "Mostly green, some turning purple"
+f_year = "The year"
+f_year_v = "A heavy crop after two weeks of rain"
+pending = "Final number follows"
+cloudy_title = "Why fresh oil is cloudy"
+cloudy = """
+Oil straight from the mill carries fine particles of fruit. Over the following months they sink, and we rack the clear oil off the sediment.
+"""
+
+[pages.cart]
+slug = "cart"
+title = "Cart | {brand}"
+description = "Your cart and order request."
+h1 = "Cart and order request"
+
+[pages.received]
+slug = "order-received"
+title = "Order request received | {brand}"
+description = "Your order request has reached us."
+h1 = "Thank you. We have your order request."
+ref_label = "Your order request number"
+text = """
+**Nothing has been charged.** This was an order request, not a payment.
+
+We have sent a confirmation to your email address. If you do not see it, please check your spam folder.
+
+Within {reply_hours} hours we will email you the payment details. We hold your bottles for {hold_hours} hours.
+"""
+
+[pages.taste]
+slug = "taste"
+title = "You tasted it in Skradin | {brand}"
+description = "You tasted our olive oil near Skradin. Order it home, shipped within the EU."
+h1 = "You tasted it in Skradin. Order it home."
+lead = "This is our family's oil from Piramatovci, close to where you tasted it. We ship within the EU."
+cta = "Choose bottles"
+waitlist_note = "Sold out or not ready yet? Leave your email and we will write when there are bottles."
+
+[pages.waitlist]
+slug = "waitlist"
+title = "Waitlist | {brand}"
+description = "Get one email when the next bottles are available."
+h1 = "Waitlist"
+lead = """
+When the harvest is sold out, or before the new oil is bottled, you can leave your email here. We write to you once, when there are bottles again. No newsletter.
+"""
+
+[pages.shipping]
+slug = "shipping"
+title = "Shipping and delivery | {brand}"
+description = "Where we ship, what it costs and how long it takes. EU only."
+h1 = "Shipping and delivery"
+lead = "We ship within the European Union. Prices are per parcel, not per bottle."
+countries_title = "Countries and prices"
+placeholder_note = "[[These shipping prices are placeholders until the carrier contract is signed.]]"
+col_zone = "Countries"
+col_parcel = "{n} bottles"
+col_parcel_one = "1 bottle"
+col_days = "Working days"
+larger_note = "Larger orders are packed in several parcels."
+pickup_title = "Local pickup"
+pickup = """
+In Croatia you can pick up your bottles in Piramatovci for free. We agree the time with you by email or phone.
+"""
+times_title = "Delivery times"
+times = """
+[[Delivery times to be confirmed with the carrier.]] We send parcels after payment has arrived.
+"""
+breakage_title = "If a bottle breaks"
+breakage = """
+[[Breakage policy to be written. For example: send a photo within 48 hours of delivery and we replace or refund the bottle.]]
+"""
+
+[pages.contact]
+slug = "contact"
+title = "Contact | {brand}"
+description = "Write or call the {brand} family in Piramatovci, near Skradin."
+h1 = "Contact"
+lead = "We answer in English and Croatian."
+email_label = "Email"
+phone_label = "Phone"
+address_label = "Address"
+
+[pages.terms]
+slug = "terms-of-sale"
+title = "Terms of sale | {brand}"
+description = "Terms of sale."
+h1 = "Terms of sale"
+body = """
+[[Placeholder. The terms of sale are written once the business is registered.]]
+
+They will cover:
+
+- Who the seller is
+- How an order request becomes a contract (after payment)
+- Prices, shipping costs and payment methods
+- Delivery and transfer of risk
+- Breakage and complaints
+- Right of withdrawal
+"""
+
+[pages.withdrawal]
+slug = "withdrawal"
+title = "Right of withdrawal | {brand}"
+description = "Your 14-day right of withdrawal."
+h1 = "Right of withdrawal"
+body = """
+[[Placeholder. The 14-day withdrawal notice and model withdrawal form are added once the business is registered.]]
+"""
+
+[pages.privacy]
+slug = "privacy"
+title = "Privacy policy | {brand}"
+description = "How we handle your data."
+h1 = "Privacy policy"
+body = """
+[[Placeholder. The privacy policy is written once the business is registered.]]
+
+What the site does today:
+
+- Order requests store your name, contact details, address and order, so we can deliver and invoice.
+- The waitlist stores your email and language, only to tell you when bottles are available.
+- Your cart is kept in your own browser until you send it.
+- No tracking scripts, no advertising cookies, no third-party embeds.
+- If you arrived from a tasting card, the card code is saved with your order so we know where you tasted the oil.
+"""
+
+[pages.business]
+slug = "business-details"
+title = "Business details | {brand}"
+description = "Seller details."
+h1 = "Business details"
+body = """
+[[Placeholder. Business form, registration number, OIB, address and VAT status follow after registration.]]
+"""
+
+# ------------------------------------------------------------------
+# Emails. Placeholders: {ref} {name} {items} {subtotal} {shipping} {total}
+# {delivery} {address} {reply_hours} {hold_hours} {brand} {email} {phone}
+# {tracking} {invoice} {pay_until}
+# ------------------------------------------------------------------
+[email.order_received]
+subject = "Order request {ref} received"
+body = """
+Hello {name},
+
+thank you for your order request {ref}. It has reached us.
+
+This is not a payment. Nothing has been charged.
+
+{items}
+
+Bottles: {subtotal}
+Shipping: {shipping}
+Total: {total}
+
+Delivery: {delivery}
+{address}
+
+Within {reply_hours} hours we will email you the payment details. We hold your bottles for {hold_hours} hours.
+
+If something is not right, just reply to this email.
+
+{brand} family
+{email}
+"""
+
+[email.payment_request]
+subject = "Payment details for order {ref}"
+body = """
+Hello {name},
+
+thank you again for your order {ref}.
+
+Total including shipping: {total}
+
+You can pay by:
+[PAYMENT METHODS: card payment link or bank transfer details go here]
+
+Please pay by {pay_until}. We hold your bottles until then.
+
+As soon as the payment arrives, we pack your parcel and send you the tracking number.
+
+{brand} family
+{email}
+"""
+
+[email.shipped]
+subject = "Your order {ref} is on its way"
+body = """
+Hello {name},
+
+your parcel has left Piramatovci.
+
+Tracking number: {tracking}
+Invoice number: {invoice}
+
+Fresh oil can look cloudy. That is normal; it settles over time.
+
+Thank you for ordering from us.
+
+{brand} family
+{email}
+"""

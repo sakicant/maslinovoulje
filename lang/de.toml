@@ -1,0 +1,380 @@
+# Deutscher Text. Markup und Regeln: siehe lang/en.toml.
+# The owner answers in English and Croatian only. Never claim German support.
+
+code = "de"
+locale = "de_DE"
+label = "Deutsch"
+
+[ui]
+skip = "Zum Inhalt springen"
+menu = "Menü"
+nav_home = "Start"
+nav_shop = "Shop"
+nav_story = "Unsere Geschichte"
+nav_harvest = "Ernte {year}"
+nav_shipping = "Versand"
+nav_contact = "Kontakt"
+nav_cart = "Warenkorb"
+lang_label = "Sprache"
+staging_banner = "Nur Vorschau. Diese Seite ist noch nicht öffentlich."
+stock_left = "Ernte {year}: noch {n} Flaschen"
+stamp_label = "Flaschen übrig"
+stock_bottle = "noch {n}"
+sold_out = "Ausverkauft"
+per_litre = "pro Liter"
+unit_price = "{price} pro Liter"
+add_to_cart = "In den Warenkorb"
+added = "Im Warenkorb"
+view_cart = "Zum Warenkorb"
+sets_title = "Sets"
+sets_intro = "Eine einzelne kleine Flasche zu verschicken kostet fast so viel wie das Öl. Sets reisen besser."
+set_price_note = "Gleicher Preis wie die Flaschen einzeln"
+pickup_only = "Nur Abholung vor Ort"
+base_price = "Preis am {date}: {price}"
+price_list = "Preisliste (CSV)"
+photo_todo = "Foto folgt"
+origin = "Herkunft: Kroatien"
+waitlist_cta = "Auf die Warteliste"
+footer_made = "Von der Familie in Piramatovci, Kroatien."
+footer_legal = "Rechtliches"
+eu_only = "Wir versenden innerhalb der EU."
+back_home = "Zur Startseite"
+
+[cart]
+title = "Ihr Warenkorb"
+empty = "Ihr Warenkorb ist leer."
+go_shop = "Flaschen auswählen"
+qty = "Menge"
+remove = "Entfernen"
+decrease = "Eine weniger"
+increase = "Eine mehr"
+country = "Lieferland"
+choose_country = "Land auswählen"
+delivery = "Lieferung"
+delivery_address = "Lieferung an Ihre Adresse"
+delivery_pickup = "Abholung in Piramatovci (kostenlos)"
+pickup_note = "Den Abholtermin vereinbaren wir per E-Mail oder Telefon."
+subtotal = "Flaschen"
+shipping = "Versand"
+total = "Gesamt"
+total_note = "Das ist der volle Preis inklusive Versand. Jetzt wird nichts berechnet."
+calculating = "Wird berechnet..."
+need_country = "Wählen Sie ein Land, um die Versandkosten zu sehen."
+quote_error = "Der Gesamtpreis konnte gerade nicht berechnet werden. Bitte versuchen Sie es gleich noch einmal."
+details_title = "Ihre Angaben"
+name = "Vor- und Nachname"
+email = "E-Mail"
+phone = "Telefon (optional)"
+address = "Straße und Hausnummer"
+address2 = "Adresszusatz (optional)"
+postal = "Postleitzahl"
+city = "Ort"
+note = "Anmerkung (optional)"
+consent = "Ich habe die [Verkaufsbedingungen](page:terms) und die [Datenschutzerklärung](page:privacy) gelesen."
+submit = "Bestellanfrage senden"
+sending = "Wird gesendet..."
+how_title = "So funktioniert die Bestellung"
+how = """
+- Sie senden eine Bestellanfrage. Auf dieser Seite wird nichts bezahlt.
+- Sie erhalten sofort eine E-Mail, dass Ihre Anfrage angekommen ist.
+- Innerhalb von {reply_hours} Stunden senden wir Ihnen die Zahlungsdaten.
+- Wir halten Ihre Flaschen {hold_hours} Stunden für Sie zurück.
+- Nach der Zahlung versenden wir und schicken Ihnen die Sendungsnummer.
+"""
+error_generic = "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie an {email}."
+error_stock = "So viele Flaschen haben wir nicht mehr. Die Mengen wurden angepasst."
+error_rate = "Zu viele Versuche. Bitte warten Sie ein paar Minuten."
+error_fields = "Bitte prüfen Sie die markierten Felder."
+not_available = "Bestellungen sind im Moment nicht möglich."
+
+[waitlist]
+email = "Ihre E-Mail"
+consent = "Ich möchte eine E-Mail erhalten, sobald Flaschen verfügbar sind. Details in der [Datenschutzerklärung](page:privacy)."
+submit = "Benachrichtigen"
+thanks = "Danke. Wir schreiben Ihnen einmal, sobald es Flaschen gibt."
+error = "Das hat nicht geklappt. Bitte prüfen Sie die Adresse."
+
+[pages.home]
+slug = ""
+title = "{brand} {category} aus Piramatovci, Kroatien"
+description = "Familien-Olivenöl von alten Bäumen in Piramatovci bei Skradin. Einige hundert Flaschen pro Ernte, Versand innerhalb der EU."
+kicker = "Ernte {year} · Piramatovci, Kroatien"
+h1 = "Olivenöl von den alten Bäumen unserer Familie"
+lead = "Einige hundert Flaschen im Jahr. Von unserer Familie bei Skradin und dem Nationalpark Krka geerntet und noch in derselben Nacht in der Ölmühle im Ort gepresst."
+cta_shop = "Flaschen bestellen"
+cta_story = "Unsere Geschichte"
+intro_title = "Was es ist"
+intro = """
+Olivenöl von den Bäumen auf dem Land unserer Familie in Piramatovci, einem Dorf oberhalb von Skradin. Manche Bäume sind so alt, dass ihre Stämme hohl geworden sind.
+
+Wir ernten im November, zu zweit oder zu dritt, mit Handschüttlern und Netzen. Die Oliven kommen in die Ölmühle im Ort und werden noch in derselben Nacht gepresst.
+
+Zwei Jahre lang haben wir dieses Öl nur an Nachbarn und Freunde verkauft, in Literflaschen. Jetzt können Sie es nach Hause bestellen.
+"""
+bottles_title = "Drei Flaschen"
+bottles_more = "Alle Flaschen und Sets"
+place_title = "Woher es kommt"
+place = """
+Piramatovci liegt in den Hügeln hinter Skradin, nahe dem Nationalpark Krka. Das Öl kommt von einem Ort und einer Familie.
+"""
+limited_title = "Wenn es weg ist, ist es weg"
+limited = """
+Eine Ernte ergibt einige hundert Flaschen. Wir kaufen kein Öl von anderen zu. Wenn die Flaschen dieses Jahres verkauft sind, kommen die nächsten mit der nächsten Ernte.
+"""
+
+[pages.shop]
+slug = "shop"
+title = "{category} bestellen | {brand}"
+description = "{brand} {category} bestellen: 0,25 l, 0,5 l und 1 l sowie Sets. Versand innerhalb der EU."
+h1 = "Flaschen und Sets"
+lead = "Die Versandkosten sehen Sie im Warenkorb, bevor Sie etwas absenden. [[Hinweis zur MwSt. folgt nach der Registrierung]]"
+
+[pages.story]
+slug = "unsere-geschichte"
+title = "Unsere Geschichte | {brand} {category}"
+description = "Eine Familie, alte Olivenbäume in Piramatovci bei Skradin und eine Ernte, die noch in derselben Nacht gepresst wird."
+h1 = "Unsere Geschichte"
+lead = "Eine kleine Familienernte von alten Bäumen bei Skradin."
+family_title = "Die Familie"
+family = """
+Wir sind die Familie {brand} aus Piramatovci. Die Olivenbäume stehen auf dem Land unserer Familie. [[Vom Eigentümer zu ergänzen: wer die Bäume gepflanzt hat, seit wann die Familie sie hat, wer heute dazugehört.]]
+"""
+grove_title = "Die Bäume"
+grove = """
+Viele unserer Bäume sind alt. Manche haben vom Alter hohle Stämme und tragen trotzdem jedes Jahr Früchte.
+"""
+harvest_title = "Die Ernte"
+harvest = """
+Wir ernten im November. Zu zweit oder zu dritt arbeiten wir mit Handschüttlern an den Bäumen und legen Netze aus, um die Früchte aufzufangen.
+
+{year} waren die Früchte überwiegend grün, einige färbten sich schon violett. Nach zwei Wochen Regen war es eine reiche Ernte.
+"""
+mill_title = "In derselben Nacht gepresst"
+mill = """
+Wir bringen die Oliven noch am Erntetag in die Ölmühle im Ort, und sie werden in derselben Nacht gepresst.
+
+Frisches Öl ist trüb. In den folgenden Monaten setzt es sich, und wir ziehen es vom Bodensatz ab.
+"""
+place_title = "Der Ort"
+place = """
+Piramatovci ist ein Dorf in den Hügeln hinter Skradin, nahe dem Nationalpark Krka, in der Gespanschaft Šibenik-Knin in Kroatien.
+"""
+
+[pages.harvest]
+slug = "ernte"
+title = "Ernte {year} | {brand} {category}"
+description = "Zahlen der Ernte {year}: Daten, Chargen, Kilogramm Oliven und Liter Öl."
+h1 = "Ernte {year}"
+lead = "Was dieses Jahr passiert ist, in Zahlen."
+facts_title = "Fakten"
+f_month = "Ernte"
+f_month_v = "November {year}"
+f_pickers = "Geerntet von"
+f_pickers_v = "Unserer Familie, zwei bis drei Personen, mit Handschüttlern und Netzen"
+f_batch1 = "Erste Charge"
+f_batch1_v = "548 kg Oliven, in derselben Nacht gepresst: 65 Liter Öl"
+f_batch2 = "Zweite Charge"
+f_batch2_v = "Etwa 420 kg Oliven, gepresst am 26. November {year}. Ergebnis folgt."
+f_total = "Gesamt der Saison"
+f_total_expected = "Erwartet etwa 110 bis 195 Liter"
+f_bottles = "Flaschen"
+f_fruit = "Früchte"
+f_fruit_v = "Überwiegend grün, einige schon violett"
+f_year = "Das Jahr"
+f_year_v = "Eine reiche Ernte nach zwei Wochen Regen"
+pending = "Endgültige Zahl folgt"
+cloudy_title = "Warum frisches Öl trüb ist"
+cloudy = """
+Öl direkt aus der Mühle enthält feine Fruchtteilchen. In den folgenden Monaten sinken sie ab, und wir ziehen das klare Öl vom Bodensatz ab.
+"""
+
+[pages.cart]
+slug = "warenkorb"
+title = "Warenkorb | {brand}"
+description = "Ihr Warenkorb und Ihre Bestellanfrage."
+h1 = "Warenkorb und Bestellanfrage"
+
+[pages.received]
+slug = "bestellung-erhalten"
+title = "Bestellanfrage erhalten | {brand}"
+description = "Ihre Bestellanfrage ist bei uns angekommen."
+h1 = "Danke. Ihre Bestellanfrage ist angekommen."
+ref_label = "Nummer Ihrer Bestellanfrage"
+text = """
+**Es wurde nichts berechnet.** Das war eine Bestellanfrage, keine Zahlung.
+
+Wir haben Ihnen eine Bestätigung per E-Mail geschickt. Falls Sie sie nicht sehen, schauen Sie bitte im Spam-Ordner nach.
+
+Innerhalb von {reply_hours} Stunden senden wir Ihnen die Zahlungsdaten. Wir halten Ihre Flaschen {hold_hours} Stunden für Sie zurück.
+"""
+
+[pages.taste]
+slug = "verkostung"
+title = "Sie haben es in Skradin probiert | {brand}"
+description = "Sie haben unser Olivenöl bei Skradin probiert. Bestellen Sie es nach Hause, Versand innerhalb der EU."
+h1 = "In Skradin probiert. Jetzt nach Hause bestellen."
+lead = "Das ist das Öl unserer Familie aus Piramatovci, ganz in der Nähe des Ortes, an dem Sie es probiert haben. Wir versenden innerhalb der EU."
+cta = "Flaschen auswählen"
+waitlist_note = "Ausverkauft oder noch nicht abgefüllt? Hinterlassen Sie Ihre E-Mail, wir schreiben Ihnen, sobald es Flaschen gibt."
+
+[pages.waitlist]
+slug = "warteliste"
+title = "Warteliste | {brand}"
+description = "Eine E-Mail, sobald die nächsten Flaschen verfügbar sind."
+h1 = "Warteliste"
+lead = """
+Wenn die Ernte ausverkauft ist oder das neue Öl noch nicht abgefüllt ist, können Sie hier Ihre E-Mail hinterlassen. Wir schreiben Ihnen einmal, sobald es wieder Flaschen gibt. Kein Newsletter.
+"""
+
+[pages.shipping]
+slug = "versand"
+title = "Versand und Lieferung | {brand}"
+description = "Wohin wir liefern, was es kostet und wie lange es dauert. Nur EU."
+h1 = "Versand und Lieferung"
+lead = "Wir versenden innerhalb der Europäischen Union. Die Preise gelten pro Paket, nicht pro Flasche."
+countries_title = "Länder und Preise"
+placeholder_note = "[[Diese Versandpreise sind Platzhalter, bis der Vertrag mit dem Paketdienst steht.]]"
+col_zone = "Länder"
+col_parcel = "{n} Flaschen"
+col_parcel_one = "1 Flasche"
+col_days = "Werktage"
+larger_note = "Größere Bestellungen werden in mehrere Pakete verpackt."
+pickup_title = "Abholung vor Ort"
+pickup = """
+In Kroatien können Sie Ihre Flaschen kostenlos in Piramatovci abholen. Den Termin vereinbaren wir per E-Mail oder Telefon.
+"""
+times_title = "Lieferzeiten"
+times = """
+[[Lieferzeiten werden mit dem Paketdienst bestätigt.]] Wir versenden, sobald die Zahlung eingegangen ist.
+"""
+breakage_title = "Wenn eine Flasche zerbricht"
+breakage = """
+[[Regelung für Bruch folgt. Zum Beispiel: Foto innerhalb von 48 Stunden nach Zustellung schicken, wir ersetzen oder erstatten die Flasche.]]
+"""
+
+[pages.contact]
+slug = "kontakt"
+title = "Kontakt | {brand}"
+description = "Schreiben Sie der Familie {brand} in Piramatovci bei Skradin oder rufen Sie an."
+h1 = "Kontakt"
+lead = "Wir antworten auf Englisch und Kroatisch."
+email_label = "E-Mail"
+phone_label = "Telefon"
+address_label = "Adresse"
+
+[pages.terms]
+slug = "agb"
+title = "Verkaufsbedingungen | {brand}"
+description = "Verkaufsbedingungen."
+h1 = "Verkaufsbedingungen"
+body = """
+[[Platzhalter. Die Verkaufsbedingungen folgen nach der Registrierung des Betriebs.]]
+
+Sie werden regeln:
+
+- Wer der Verkäufer ist
+- Wie aus einer Bestellanfrage ein Vertrag wird (nach der Zahlung)
+- Preise, Versandkosten und Zahlungsarten
+- Lieferung und Gefahrübergang
+- Bruch und Reklamationen
+- Widerrufsrecht
+"""
+
+[pages.withdrawal]
+slug = "widerruf"
+title = "Widerrufsrecht | {brand}"
+description = "Ihr 14-tägiges Widerrufsrecht."
+h1 = "Widerrufsrecht"
+body = """
+[[Platzhalter. Widerrufsbelehrung und Muster-Widerrufsformular folgen nach der Registrierung des Betriebs.]]
+"""
+
+[pages.privacy]
+slug = "datenschutz"
+title = "Datenschutzerklärung | {brand}"
+description = "Wie wir mit Ihren Daten umgehen."
+h1 = "Datenschutzerklärung"
+body = """
+[[Platzhalter. Die Datenschutzerklärung folgt nach der Registrierung des Betriebs.]]
+
+Was die Seite heute tut:
+
+- Bestellanfragen speichern Name, Kontaktdaten, Adresse und Bestellung, damit wir liefern und eine Rechnung stellen können.
+- Die Warteliste speichert Ihre E-Mail und Sprache, nur um Ihnen zu sagen, wann es Flaschen gibt.
+- Ihr Warenkorb bleibt in Ihrem eigenen Browser, bis Sie ihn absenden.
+- Keine Tracking-Skripte, keine Werbe-Cookies, keine eingebetteten Inhalte Dritter.
+- Wenn Sie über eine Verkostungskarte gekommen sind, wird der Code der Karte mit Ihrer Bestellung gespeichert, damit wir wissen, wo Sie das Öl probiert haben.
+"""
+
+[pages.business]
+slug = "impressum"
+title = "Impressum | {brand}"
+description = "Angaben zum Verkäufer."
+h1 = "Impressum"
+body = """
+[[Platzhalter. Rechtsform, Registernummer, OIB, Adresse und MwSt.-Status folgen nach der Registrierung.]]
+"""
+
+[email.order_received]
+subject = "Bestellanfrage {ref} erhalten"
+body = """
+Hallo {name},
+
+vielen Dank für Ihre Bestellanfrage {ref}. Sie ist bei uns angekommen.
+
+Das ist keine Zahlung. Es wurde nichts berechnet.
+
+{items}
+
+Flaschen: {subtotal}
+Versand: {shipping}
+Gesamt: {total}
+
+Lieferung: {delivery}
+{address}
+
+Innerhalb von {reply_hours} Stunden senden wir Ihnen die Zahlungsdaten. Wir halten Ihre Flaschen {hold_hours} Stunden für Sie zurück.
+
+Wenn etwas nicht stimmt, antworten Sie einfach auf diese E-Mail (gern auf Englisch).
+
+Familie {brand}
+{email}
+"""
+
+[email.payment_request]
+subject = "Zahlungsdaten für Bestellung {ref}"
+body = """
+Hallo {name},
+
+nochmals danke für Ihre Bestellung {ref}.
+
+Gesamt inklusive Versand: {total}
+
+Sie können bezahlen per:
+[ZAHLUNGSARTEN: Link zur Kartenzahlung oder Bankverbindung hier einfügen]
+
+Bitte zahlen Sie bis {pay_until}. Bis dahin halten wir Ihre Flaschen zurück.
+
+Sobald die Zahlung da ist, packen wir Ihr Paket und schicken Ihnen die Sendungsnummer.
+
+Familie {brand}
+{email}
+"""
+
+[email.shipped]
+subject = "Ihre Bestellung {ref} ist unterwegs"
+body = """
+Hallo {name},
+
+Ihr Paket hat Piramatovci verlassen.
+
+Sendungsnummer: {tracking}
+Rechnungsnummer: {invoice}
+
+Frisches Öl kann trüb aussehen. Das ist normal, es setzt sich mit der Zeit.
+
+Danke, dass Sie bei uns bestellt haben.
+
+Familie {brand}
+{email}
+"""

@@ -1,0 +1,21 @@
+<section class="section section--head">
+  <div class="wrap narrow">
+    <h1>{{ pg.h1 }}</h1>
+    <div class="lead">{{ pg.lead|md }}</div>
+    <form class="form waitlist" data-waitlist novalidate>
+      <div class="hp" aria-hidden="true">
+        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <label class="field">
+        <span>{{ t.waitlist.email }}</span>
+        <input type="email" name="email" required autocomplete="email" inputmode="email">
+      </label>
+      <label class="check">
+        <input type="checkbox" name="consent" required>
+        <span>{{ t.waitlist.consent|inline }}</span>
+      </label>
+      <button class="btn" type="submit">{{ t.waitlist.submit }}</button>
+      <p class="form__msg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>

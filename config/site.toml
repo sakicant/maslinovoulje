@@ -1,0 +1,67 @@
+# Site config. One place for everything that is still OPEN.
+# Edit, then run `python build.py`.
+
+# ---------------------------------------------------------------
+# STAGING SWITCH
+# true  = noindex on every page + robots.txt blocks everything + no sitemap
+# false = launch mode. Only switch at launch.
+# ---------------------------------------------------------------
+staging = true
+
+# Brand (OPEN: working title only). Diacritics allowed here; URLs never use them.
+brand_name = "Šakić"
+# Shown after the brand in the logo, e.g. "Šakić  olive oil". Per language below.
+domain = "sakicolive.com"          # OPEN: not registered, availability not checked
+site_url = "https://sakicolive.com" # used for canonical, hreflang, OG tags
+
+# Product category wording. Stays "olive oil" until the chemical and sensory
+# analysis is done. Switch to extra virgin wording here ONLY after the lab result.
+[category]
+en = "olive oil"
+de = "Olivenöl"
+hr = "maslinovo ulje"
+
+[tagline]   # OPEN
+en = "Family olive oil from Piramatovci, near Skradin"
+de = "Familien-Olivenöl aus Piramatovci bei Skradin"
+hr = "Obiteljsko maslinovo ulje iz Piramatovaca kod Skradina"
+
+[harvest]
+year = 2026
+# Final litres and bottle count are OPEN. Leave a value empty ("") to show a placeholder.
+total_litres = ""
+total_bottles = ""
+
+[selling]
+# false = shop shows the waitlist instead of the cart (before launch or between harvests)
+enabled = true
+# Bottles are held for this many hours after an order request
+hold_hours = 48
+# Owner sends payment details within this many hours
+payment_reply_hours = 24
+
+[contact]   # OPEN: placeholders
+email = "info@sakicolive.com"
+phone = "+385 00 000 0000"
+address_lines = ["Piramatovci, Skradin", "Croatia"]   # OPEN: full postal address
+
+[languages]
+# First entry is the default language, served at the site root.
+order = ["en", "de", "hr"]
+
+[seo]
+# Product structured data (schema.org Product). Keep false until claims are final.
+product_schema = false
+og_image = "/assets/img/og-placeholder.png"
+
+[pricing]
+# Croatian "bazna cijena" rule (in force 17 Nov 2026). Applies once the business is
+# registered. When true, every shown price gets its base price line from products.json.
+show_base_price = false
+# Machine-readable price list. Set to "/cjenik.csv" once the business is registered.
+cjenik_file = ""
+
+[admin]
+# Folder name for the admin page. Change to something not guessable before launch.
+# Never list it in robots.txt.
+dir = "admin"

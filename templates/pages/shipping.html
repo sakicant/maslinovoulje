@@ -1,0 +1,24 @@
+<section class="section section--head">
+  <div class="wrap narrow">
+    <h1>{{ pg.h1 }}</h1>
+    <p class="lead">{{ pg.lead }}</p>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap">
+    <h2>{{ pg.countries_title }}</h2>
+    <p>{{ pg.placeholder_note|inline }}</p>
+    {{ x.shipping_table|raw }}
+    <p class="note">{{ pg.larger_note }}</p>
+  </div>
+</section>
+<section class="section section--sage">
+  <div class="wrap narrow prose">
+    <h2>{{ pg.pickup_title }}</h2>
+    {{ pg.pickup|md }}
+    <h2>{{ pg.times_title }}</h2>
+    {{ pg.times|md }}
+    <h2>{{ pg.breakage_title }}</h2>
+    {{ pg.breakage|md }}
+  </div>
+</section>

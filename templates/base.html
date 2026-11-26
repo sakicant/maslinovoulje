@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="theme-color" content="#2E4A2B">
+  {{ page.head|raw }}
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css?v={{ page.ver }}">
+  <script src="/assets/js/site.js?v={{ page.ver }}" defer></script>
+</head>
+<body data-page="{{ page.id }}">
+  <a class="skip" href="#main">{{ ui.skip }}</a>
+  {{ page.staging|raw }}
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="logo" href="{{ page.home }}">
+        <span class="logo__brand">{{ site.brand }}</span>
+        <span class="logo__cat">{{ site.category }}</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="{{ ui.menu }}">
+        <ul>{{ page.nav|raw }}</ul>
+        <div class="langs" aria-label="{{ ui.lang_label }}">{{ page.langs|raw }}</div>
+      </nav>
+      <a class="cartlink" href="{{ page.cart }}" aria-label="{{ ui.nav_cart }}">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Zm3 0V6a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <span class="cartlink__n" data-cart-count hidden>0</span>
+      </a>
+      <button class="menubtn" type="button" aria-controls="nav" aria-expanded="false">
+        <span class="sr">{{ ui.menu }}</span><span class="menubtn__bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+{{ page.body|raw }}
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <div>
+        <p class="logo logo--foot"><span class="logo__brand">{{ site.brand }}</span> <span class="logo__cat">{{ site.category }}</span></p>
+        <p>{{ ui.footer_made }}</p>
+        <p>{{ ui.eu_only }}</p>
+      </div>
+      <div>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><a href="tel:{{ site.phone_href }}">{{ site.phone }}</a></p>
+        <p>{{ site.address|raw }}</p>
+      </div>
+      <div>
+        <p class="foot__h">{{ ui.footer_legal }}</p>
+        <ul class="foot__legal">{{ page.legal|raw }}</ul>
+        {{ page.cjenik|raw }}
+      </div>
+    </div>
+  </footer>
+  <div class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="application/json" id="catalog">{{ x.catalog|raw }}</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+dist/
+config.php
+__pycache__/
+*.pyc
+*.sqlite
+*.log
+.claude/launch.json

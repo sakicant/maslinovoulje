@@ -1,0 +1,45 @@
+{
+  "_readme": "Photo slots. Put the owner's own photo in static/img/ and set src (e.g. \"/assets/img/grove.jpg\"). While src is empty, a grey placeholder shows the caption below. Never use stock photos.",
+  "hero": {
+    "src": "",
+    "ratio": "4/3",
+    "todo": "Old olive trees on the family land in Piramatovci, wide shot",
+    "alt": {"en": "Old olive trees in Piramatovci", "de": "Alte Olivenbäume in Piramatovci", "hr": "Stare masline u Piramatovcima"}
+  },
+  "hollow_trunk": {
+    "src": "",
+    "ratio": "4/5",
+    "todo": "Close-up of an old tree with a hollow trunk",
+    "alt": {"en": "An old olive tree with a hollow trunk", "de": "Ein alter Olivenbaum mit hohlem Stamm", "hr": "Staro stablo masline sa šupljim deblom"}
+  },
+  "harvest_nets": {
+    "src": "",
+    "ratio": "4/3",
+    "todo": "Family picking with hand-held shakers, nets under the tree",
+    "alt": {"en": "Picking olives with nets under the tree", "de": "Olivenernte mit Netzen unter dem Baum", "hr": "Berba maslina s mrežama ispod stabla"}
+  },
+  "fruit": {
+    "src": "",
+    "ratio": "1/1",
+    "todo": "Harvested olives, mostly green with some turning purple",
+    "alt": {"en": "Freshly picked olives, mostly green", "de": "Frisch geerntete Oliven, überwiegend grün", "hr": "Tek ubrane masline, uglavnom zelene"}
+  },
+  "mill": {
+    "src": "",
+    "ratio": "4/3",
+    "todo": "The local mill at night, fresh cloudy oil running",
+    "alt": {"en": "Fresh oil at the local mill at night", "de": "Frisches Öl nachts in der Ölmühle", "hr": "Svježe ulje noću u lokalnoj uljari"}
+  },
+  "bottles": {
+    "src": "",
+    "ratio": "3/2",
+    "todo": "The three bottles (0.25 L, 0.5 L, 1 L) with labels, on a plain background",
+    "alt": {"en": "Three bottles of olive oil", "de": "Drei Flaschen Olivenöl", "hr": "Tri boce maslinovog ulja"}
+  },
+  "place": {
+    "src": "",
+    "ratio": "16/9",
+    "todo": "View over Piramatovci and the hills towards Skradin",
+    "alt": {"en": "The hills of Piramatovci near Skradin", "de": "Die Hügel von Piramatovci bei Skradin", "hr": "Brda Piramatovaca kod Skradina"}
+  }
+}

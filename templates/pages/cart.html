@@ -1,0 +1,75 @@
+<section class="section section--head">
+  <div class="wrap">
+    <h1>{{ pg.h1 }}</h1>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap cart" data-cartpage>
+    <noscript><p class="alert">JavaScript is needed for the cart. / Für den Warenkorb wird JavaScript benötigt. / Za košaricu je potreban JavaScript.</p></noscript>
+
+    <div class="cart__empty" data-empty hidden>
+      <p>{{ cart.empty }}</p>
+      <p><a class="btn" href="{{ url:shop }}">{{ cart.go_shop }}</a></p>
+    </div>
+
+    <form class="cart__grid form" data-order novalidate hidden>
+      <div class="cart__main">
+        <h2 class="h3">{{ cart.title }}</h2>
+        <ul class="lines" data-lines></ul>
+
+        <div class="field">
+          <label for="country">{{ cart.country }}</label>
+          <select id="country" name="country" required autocomplete="country">
+            <option value="">{{ cart.choose_country }}</option>
+          </select>
+        </div>
+
+        <fieldset class="field delivery" data-delivery hidden>
+          <legend>{{ cart.delivery }}</legend>
+          <label class="radio"><input type="radio" name="delivery" value="address" checked> <span>{{ cart.delivery_address }}</span></label>
+          <label class="radio"><input type="radio" name="delivery" value="pickup"> <span>{{ cart.delivery_pickup }}</span></label>
+          <p class="note" data-pickup-note hidden>{{ cart.pickup_note }}</p>
+        </fieldset>
+
+        <h2 class="h3">{{ cart.details_title }}</h2>
+        <div class="hp" aria-hidden="true">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="field"><label for="f-name">{{ cart.name }}</label><input id="f-name" name="name" required autocomplete="name" maxlength="120"></div>
+        <div class="field"><label for="f-email">{{ cart.email }}</label><input id="f-email" type="email" name="email" required autocomplete="email" inputmode="email" maxlength="160"></div>
+        <div class="field"><label for="f-phone">{{ cart.phone }}</label><input id="f-phone" type="tel" name="phone" autocomplete="tel" maxlength="40"></div>
+        <div data-address-fields>
+          <div class="field"><label for="f-address">{{ cart.address }}</label><input id="f-address" name="address" required autocomplete="address-line1" maxlength="160"></div>
+          <div class="field"><label for="f-address2">{{ cart.address2 }}</label><input id="f-address2" name="address2" autocomplete="address-line2" maxlength="160"></div>
+          <div class="field-row">
+            <div class="field"><label for="f-postal">{{ cart.postal }}</label><input id="f-postal" name="postal" required autocomplete="postal-code" maxlength="20"></div>
+            <div class="field"><label for="f-city">{{ cart.city }}</label><input id="f-city" name="city" required autocomplete="address-level2" maxlength="80"></div>
+          </div>
+        </div>
+        <div class="field"><label for="f-note">{{ cart.note }}</label><textarea id="f-note" name="note" rows="3" maxlength="1000"></textarea></div>
+      </div>
+
+      <aside class="cart__side">
+        <div class="summary" aria-live="polite">
+          <dl>
+            <div><dt>{{ cart.subtotal }}</dt><dd data-subtotal>&nbsp;</dd></div>
+            <div><dt>{{ cart.shipping }}</dt><dd data-shipping>&nbsp;</dd></div>
+            <div class="summary__total"><dt>{{ cart.total }}</dt><dd data-total>&nbsp;</dd></div>
+          </dl>
+          <p class="note" data-quote-msg></p>
+          <p class="note">{{ cart.total_note }}</p>
+          <label class="check">
+            <input type="checkbox" name="consent" required>
+            <span>{{ cart.consent|inline }}</span>
+          </label>
+          <button class="btn btn--block" type="submit" data-submit disabled>{{ cart.submit }}</button>
+          <p class="form__msg" role="alert" data-form-msg></p>
+        </div>
+        <div class="how">
+          <h2 class="h4">{{ cart.how_title }}</h2>
+          {{ cart.how|md }}
+        </div>
+      </aside>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+<section class="section section--head">
+  <div class="wrap narrow">
+    <h1>{{ pg.h1 }}</h1>
+    <p class="lead">{{ pg.lead }}</p>
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>{{ pg.family_title }}</h2>
+      {{ pg.family|md }}
+      <h2>{{ pg.grove_title }}</h2>
+      {{ pg.grove|md }}
+    </div>
+    {{ photo:hollow_trunk }}
+  </div>
+</section>
+<section class="section section--sage">
+  <div class="wrap split split--rev">
+    <div class="prose">
+      <h2>{{ pg.harvest_title }}</h2>
+      {{ pg.harvest|md }}
+    </div>
+    {{ photo:harvest_nets }}
+  </div>
+</section>
+<section class="section">
+  <div class="wrap split">
+    <div class="prose">
+      <h2>{{ pg.mill_title }}</h2>
+      {{ pg.mill|md }}
+    </div>
+    {{ photo:mill }}
+  </div>
+</section>
+<section class="section section--tight">
+  <div class="wrap split split--rev">
+    <div class="prose">
+      <h2>{{ pg.place_title }}</h2>
+      {{ pg.place|md }}
+      <p class="actions"><a class="btn" href="{{ url:shop }}">{{ ui.nav_shop }}</a></p>
+    </div>
+    {{ photo:place }}
+  </div>
+</section>
