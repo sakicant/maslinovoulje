@@ -259,7 +259,7 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 .foot__h { font-weight: 700; margin-bottom: 6px; }
 .foot__legal { list-style: none; padding: 0; margin: 0 0 1em; }
 .foot__legal li { margin-bottom: 4px; }
-.foot__credit { margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(227,232,216,.18); font-size: .78rem; opacity: .8; }
+.foot__credit { text-align: center; margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(227,232,216,.18); font-size: .78rem; opacity: .8; }
 .foot__credit p { margin: 0; }
 .foot__credit a { color: var(--sage); text-decoration: none; }
 .foot__credit a:hover { text-decoration: underline; }
