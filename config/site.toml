@@ -46,7 +46,8 @@ payment_reply_hours = 24
 [contact]   # OPEN: placeholders
 email = "info@sakicolive.com"
 phone = "+385 00 000 0000"
-address_lines = ["Piramatovci, Skradin", "Croatia"]   # OPEN: full postal address
+# OPEN: full postal address. One list per language (footer and contact page).
+address_lines = { hr = ["Piramatovci, Skradin", "Hrvatska"], en = ["Piramatovci, Skradin", "Croatia"], de = ["Piramatovci, Skradin", "Kroatien"] }
 
 [languages]
 # First entry is the default language, served at the site root (Croatian).

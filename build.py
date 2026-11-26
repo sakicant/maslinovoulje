@@ -166,6 +166,12 @@ def fill(text, lang, extra=None):
     return re.sub(r"\{(\w+)\}", lambda m: v.get(m.group(1), m.group(0)), text)
 
 
+def address_lines(lang):
+    """Postal address for one language; accepts a plain list (same for all languages) too."""
+    a = SITE["contact"]["address_lines"]
+    return a.get(lang) or a[DEFAULT_LANG] if isinstance(a, dict) else a
+
+
 def esc(s):
     return html.escape(str(s), quote=True)
 
@@ -566,7 +572,7 @@ def build_page(page_id, tpl_name, lang, ver):
                  "tagline": SITE["tagline"][lang], "year": YEAR,
                  "email": SITE["contact"]["email"], "phone": SITE["contact"]["phone"],
                  "phone_href": re.sub(r"[^\d+]", "", SITE["contact"]["phone"]),
-                 "address": "<br>".join(esc(x) for x in SITE["contact"]["address_lines"])},
+                 "address": "<br>".join(esc(x) for x in address_lines(lang))},
         "x": {
             "stamp": stock_badge(lang), "stamp_big": stock_badge(lang, big=True),
             "products": products_grid(lang), "products_compact": products_grid(lang, compact=True),

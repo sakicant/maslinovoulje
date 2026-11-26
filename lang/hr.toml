@@ -38,7 +38,7 @@ footer_made = "Obitelj iz Piramatovaca, Hrvatska."
 footer_legal = "Pravne informacije"
 eu_only = "Dostavljamo unutar EU."
 back_home = "Natrag na početnu"
-footer_credit = "Izrada web stranice"
+footer_credit = "Web izradio i hosta:"
 
 [cart]
 title = "Vaša košarica"

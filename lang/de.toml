@@ -39,7 +39,7 @@ footer_made = "Von der Familie in Piramatovci, Kroatien."
 footer_legal = "Rechtliches"
 eu_only = "Wir versenden innerhalb der EU."
 back_home = "Zur Startseite"
-footer_credit = "Website erstellt von"
+footer_credit = "Website erstellt und gehostet von"
 
 [cart]
 title = "Ihr Warenkorb"

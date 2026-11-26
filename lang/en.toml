@@ -49,7 +49,7 @@ footer_made = "Made by the family in Piramatovci, Croatia."
 footer_legal = "Legal"
 eu_only = "We ship within the EU."
 back_home = "Back to the home page"
-footer_credit = "Website created by"
+footer_credit = "Website built and hosted by"
 
 [cart]
 title = "Your cart"
