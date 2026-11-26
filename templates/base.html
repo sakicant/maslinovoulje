@@ -21,8 +21,8 @@
         <span class="logo__cat">{{ site.category }}</span>
       </a>
       <nav class="nav" id="nav" aria-label="{{ ui.menu }}">
+        {{ page.langs|raw }}
         <ul>{{ page.nav|raw }}</ul>
-        <div class="langs" aria-label="{{ ui.lang_label }}">{{ page.langs|raw }}</div>
       </nav>
       <a class="cartlink" href="{{ page.cart }}" aria-label="{{ ui.nav_cart }}">
         <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Zm3 0V6a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>

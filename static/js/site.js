@@ -64,6 +64,23 @@
     });
   }
 
+  var dd = document.querySelector('.langdd');
+  if (dd) {
+    var ddBtn = dd.querySelector('.langdd__toggle');
+    ddBtn.addEventListener('click', function (ev) {
+      ev.stopPropagation();
+      var open = !dd.classList.contains('open');
+      dd.classList.toggle('open', open);
+      ddBtn.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', function (ev) {
+      if (!dd.contains(ev.target)) { dd.classList.remove('open'); ddBtn.setAttribute('aria-expanded', 'false'); }
+    });
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape' && dd.classList.contains('open')) { dd.classList.remove('open'); ddBtn.setAttribute('aria-expanded', 'false'); ddBtn.focus(); }
+    });
+  }
+
   var toastTimer;
   function toast(text, link) {
     var t = document.querySelector('.toast');

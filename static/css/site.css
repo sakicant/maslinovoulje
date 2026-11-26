@@ -57,9 +57,17 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 .nav ul { list-style: none; margin: 0; padding: 0; }
 .nav a { text-decoration: none; color: var(--black); }
 .nav a[aria-current="page"] { color: var(--olive); text-decoration: underline; }
-.langs { display: flex; gap: 4px; }
-.langs a { font-size: .8rem; font-weight: 600; padding: 4px 6px; text-decoration: none; color: var(--muted); border-radius: var(--radius); }
-.langs a[aria-current="true"] { color: #fff; background: var(--green); }
+/* language dropdown, first item of the menu (pattern from taxisibenik.hr) */
+.langdd { position: relative; }
+.langdd__toggle { display: flex; align-items: center; gap: 8px; background: none; border: 0; padding: 8px 0; font: 600 .92rem/1 var(--sans); color: var(--ink); cursor: pointer; }
+.langdd__toggle .caret { width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); margin: -3px 0 0 2px; transition: transform .15s; }
+.langdd.open .caret { transform: rotate(225deg); margin-top: 3px; }
+.langdd__menu { display: none; flex-direction: column; gap: 2px; }
+.langdd.open .langdd__menu { display: flex; }
+.langdd__item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--radius); text-decoration: none; color: var(--black); font-size: .95rem; white-space: nowrap; }
+.langdd__item:hover { background: var(--sage); color: var(--ink); }
+.langdd__item[aria-current="true"] { font-weight: 700; color: var(--green); }
+.flag { width: 20px; height: 15px; object-fit: cover; border-radius: 2px; flex: none; box-shadow: 0 0 0 1px rgba(0,0,0,.12); }
 .cartlink { position: relative; display: grid; place-items: center; width: 44px; height: 44px; color: var(--ink); }
 .cartlink__n { position: absolute; top: 4px; right: 0; min-width: 18px; height: 18px; border-radius: 9px; background: var(--olive); color: #fff; font-size: .7rem; font-weight: 700; display: grid; place-items: center; padding: 0 4px; }
 .menubtn { width: 44px; height: 44px; border: 0; background: none; display: grid; place-items: center; cursor: pointer; }
@@ -71,11 +79,21 @@ mark.todo { background: var(--todo); color: var(--black); padding: 0 .25em; bord
 .menubtn[aria-expanded="true"] .menubtn__bars::after { transform: translateY(-7px) rotate(-45deg); }
 .nav.is-open { display: block; position: absolute; left: 0; right: 0; top: 100%; background: var(--paper); border-bottom: 1px solid var(--line); padding: 8px var(--gutter) 16px; }
 .nav.is-open li a { display: block; padding: 12px 0; border-bottom: 1px solid var(--sage); font-size: 1.05rem; }
-.nav.is-open .langs { margin-top: 12px; }
+.nav.is-open .langdd { border-bottom: 1px solid var(--sage); padding-bottom: 4px; }
+.nav.is-open .langdd__toggle { width: 100%; padding: 12px 0; font-size: 1.05rem; }
+.nav.is-open .langdd__toggle .caret { margin-left: auto; }
+.nav.is-open .langdd__menu { background: #f6f8f1; border-radius: var(--radius); margin-bottom: 8px; }
 
 @media (min-width: 900px) {
   .menubtn { display: none; }
-  .nav { display: flex; align-items: center; gap: 28px; order: 0; }
+  .nav { display: flex; align-items: center; gap: 24px; order: 0; }
+  .langdd { padding-right: 20px; border-right: 1px solid var(--line); }
+  .langdd__menu { position: absolute; top: 100%; left: -12px; margin-top: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; padding: 6px; min-width: 170px; box-shadow: 0 12px 28px rgba(20,20,20,.12); z-index: 30; }
+  .langdd__menu::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+  @media (hover: hover) {
+    .langdd:hover .langdd__menu, .langdd:focus-within .langdd__menu { display: flex; }
+    .langdd:hover .caret { transform: rotate(225deg); margin-top: 3px; }
+  }
   .nav ul { display: flex; gap: 22px; }
   .nav a { font-size: .95rem; }
   .cartlink { order: 2; }

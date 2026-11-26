@@ -508,12 +508,23 @@ def nav_html(page_id, lang):
     return "".join(items)
 
 
+def flag_img(code):
+    # Self-hosted SVG flags (emoji flags do not render on Windows), same as taxisibenik.hr.
+    return f'<img class="flag" src="/assets/img/flags/{code}.svg" width="20" height="15" alt="" decoding="async">'
+
+
 def lang_switch(page_id, lang):
-    out = []
+    items = []
     for code in LANGS:
         cur = ' aria-current="true"' if code == lang else ""
-        out.append(f'<a href="{url(page_id, code)}" hreflang="{code}" lang="{code}"{cur}>{code.upper()}</a>')
-    return "".join(out)
+        items.append(f'<a class="langdd__item" href="{url(page_id, code)}" hreflang="{code}" lang="{code}"{cur}>'
+                     f'{flag_img(code)} {esc(T[code]["label"])}</a>')
+    label = esc(T[lang]["ui"]["lang_label"])
+    return (f'<div class="langdd">'
+            f'<button class="langdd__toggle" type="button" aria-expanded="false" aria-haspopup="true" '
+            f'aria-label="{label}: {esc(T[lang]["label"])}">{flag_img(lang)} <span>{esc(T[lang]["label"])}</span>'
+            f'<span class="caret" aria-hidden="true"></span></button>'
+            f'<div class="langdd__menu">{"".join(items)}</div></div>')
 
 
 def legal_links(lang):
